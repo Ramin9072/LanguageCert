@@ -14,6 +14,7 @@ export interface Word {
   meaning: string; // Persian meaning, written by the user
   example: string; // example sentence written by the user (may be empty)
   blank: Blank | null;
+  source?: string; // name of the file the word was imported from
 }
 
 export interface WordStat {

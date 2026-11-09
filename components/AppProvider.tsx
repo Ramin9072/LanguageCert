@@ -7,18 +7,18 @@ import type { Accent, Word, WordStat } from "@/lib/types";
 const KEY = "wordwise:v2";
 
 interface Stored {
-  fileName: string;
   words: Word[];
   stats: Record<string, WordStat>;
   accent: Accent;
 }
 
-const EMPTY: Stored = { fileName: "", words: [], stats: {}, accent: "en-US" };
+const EMPTY: Stored = { words: [], stats: {}, accent: "en-US" };
 
 interface Ctx {
   data: Stored;
   hydrated: boolean;
-  saveWords: (fileName: string, words: Word[]) => void;
+  addWords: (source: string, words: Word[]) => { added: number; skipped: number; replaced: number };
+  removeSource: (source: string) => void;
   clearWords: () => void;
   record: (wordId: string, correct: boolean) => void;
   resetProgress: () => void;
@@ -60,10 +60,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) {
-        const p = JSON.parse(raw) as Partial<Stored>;
+        const p = JSON.parse(raw) as Partial<Stored> & { fileName?: string };
+        // lists saved by an earlier version have no source name on their words
+        const legacy = (typeof p.fileName === "string" && p.fileName) || "Earlier import";
         setData({
-          fileName: typeof p.fileName === "string" ? p.fileName : "",
-          words: Array.isArray(p.words) ? p.words.filter(validWord) : [],
+          words: Array.isArray(p.words) ? p.words.filter(validWord).map((w) => ({ ...w, source: w.source || legacy })) : [],
           stats: p.stats && typeof p.stats === "object" ? p.stats : {},
           accent: p.accent === "en-GB" ? "en-GB" : "en-US",
         });
@@ -95,8 +96,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
     return () => synth.removeEventListener("voiceschanged", update);
   }, []);
 
-  const saveWords = useCallback((fileName: string, words: Word[]) => setData((d) => ({ ...d, fileName, words })), []);
-  const clearWords = useCallback(() => setData((d) => ({ ...d, fileName: "", words: [] })), []);
+  // New words are appended to the list. Importing a file with the same name again replaces that file's words,
+  // so you can fix a mistake and upload it again. A word that already exists from another file is not added twice.
+  const addWords = useCallback(
+    (source: string, incoming: Word[]) => {
+      const kept = data.words.filter((w) => w.source !== source);
+      const have = new Set(kept.map((w) => w.id));
+      const fresh = incoming.filter((w) => !have.has(w.id)).map((w) => ({ ...w, source }));
+      setData((d) => ({ ...d, words: [...d.words.filter((w) => w.source !== source), ...fresh] }));
+      return { added: fresh.length, skipped: incoming.length - fresh.length, replaced: data.words.length - kept.length };
+    },
+    [data.words]
+  );
+  const removeSource = useCallback((source: string) => setData((d) => ({ ...d, words: d.words.filter((w) => w.source !== source) })), []);
+  const clearWords = useCallback(() => setData((d) => ({ ...d, words: [] })), []);
   const setAccent = useCallback((accent: Accent) => setData((d) => ({ ...d, accent })), []);
   const resetProgress = useCallback(() => setData((d) => ({ ...d, stats: {} })), []);
 
@@ -122,8 +135,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const hasVoice = useMemo(() => !!pickVoice(voices, data.accent), [voices, data.accent]);
 
   const value = useMemo(
-    () => ({ data, hydrated, saveWords, clearWords, record, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull }),
-    [data, hydrated, saveWords, clearWords, record, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull]
+    () => ({ data, hydrated, addWords, removeSource, clearWords, record, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull }),
+    [data, hydrated, addWords, removeSource, clearWords, record, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull]
   );
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

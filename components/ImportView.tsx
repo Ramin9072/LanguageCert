@@ -1,14 +1,15 @@
 "use client";
 
-import { DragEvent, useRef, useState } from "react";
-import { Issue, MAX_FILE_BYTES, parseWordList } from "@/lib/parse";
+import { DragEvent, useMemo, useRef, useState } from "react";
+import { formatWordList, Issue, MAX_FILE_BYTES, parseWordList } from "@/lib/parse";
 import { SAMPLE_TEXT } from "@/lib/sample";
 import type { Tab } from "@/lib/types";
 import { useApp } from "./AppProvider";
 import { Chip, ErrorBox, Fa } from "./ui";
 
 export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
-  const { data, hydrated, saveWords, clearWords, storageFull } = useApp();
+  const { data, hydrated, addWords, removeSource, clearWords, storageFull } = useApp();
+  const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [issues, setIssues] = useState<Issue[]>([]);
   const [dragging, setDragging] = useState(false);
@@ -22,11 +23,16 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
       return;
     }
     setError("");
-    saveWords(name, words);
+    const r = addWords(name, words);
+    const parts = [`${r.added} new ${r.added === 1 ? "word" : "words"} added from ${name}.`];
+    if (r.replaced > 0) parts.push(`The earlier import of this file (${r.replaced} words) was replaced.`);
+    if (r.skipped > 0) parts.push(`${r.skipped} already in your list from another file, so skipped.`);
+    setNotice(parts.join(" "));
   }
 
   async function accept(files: FileList | File[] | null) {
     setError("");
+    setNotice("");
     setIssues([]);
     const list = Array.from(files ?? []);
     if (list.length === 0) return;
@@ -64,6 +70,21 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
     URL.revokeObjectURL(url);
   }
 
+  function downloadAll() {
+    const url = URL.createObjectURL(new Blob(["\uFEFF" + formatWordList(data.words)], { type: "text/plain;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "wordwise-my-words.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  const sources = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const w of data.words) m.set(w.source || "Earlier import", (m.get(w.source || "Earlier import") ?? 0) + 1);
+    return Array.from(m, ([name, count]) => ({ name, count }));
+  }, [data.words]);
+
   const errors = issues.filter((i) => i.level === "error");
   const warnings = issues.filter((i) => i.level === "warning");
   const withBlank = data.words.filter((w) => w.blank).length;
@@ -71,9 +92,9 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="font-display text-4xl sm:text-5xl">Turn your word list into quizzes</h1>
+        <h1 className="font-display text-4xl sm:text-5xl">Build your word list</h1>
         <p className="mt-2 max-w-xl text-muted">
-          Upload a .txt file with your words, their Persian meanings and example sentences. WordWise builds the exercises and reads the words aloud in an English accent.
+          Upload a .txt file with your words, Persian meanings and example sentences. Every file you add is saved in this browser and added to your list, so you can practice all your words together.
         </p>
       </section>
 
@@ -89,14 +110,14 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
             dragging ? "border-accent bg-accent-soft" : "border-line"
           }`}
         >
-          <p className="text-lg font-medium">Drop your .txt file here</p>
+          <p className="text-lg font-medium">{data.words.length ? "Drop another .txt file to add more words" : "Drop your .txt file here"}</p>
           <p className="mt-1 text-sm text-muted">One UTF-8 text file, up to {Math.round(MAX_FILE_BYTES / 1024)} KB.</p>
           <div className="mt-5 flex flex-wrap justify-center gap-3">
             <button className="btn-primary" onClick={() => inputRef.current?.click()}>
-              {data.words.length ? "Replace file" : "Choose a file"}
+              {data.words.length ? "Add another file" : "Choose a file"}
             </button>
             <button className="btn-secondary" onClick={() => load("sample.txt", SAMPLE_TEXT)}>
-              Try the sample words
+              Add the sample words
             </button>
           </div>
         </div>
@@ -119,13 +140,19 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
 
       {storageFull && <ErrorBox message="Your browser storage is full, so your word list and progress may not be saved." />}
 
+      {notice && (
+        <div role="status" className="rounded-xl border border-good/20 bg-good-soft px-4 py-3 text-sm text-good">
+          {notice}
+        </div>
+      )}
+
       {hydrated && data.words.length > 0 && (
         <section className="card p-5 sm:p-6">
           <div className="flex flex-wrap items-center gap-3">
             <div className="mr-auto">
-              <h2 className="font-medium">{data.fileName || "Your word list"}</h2>
+              <h2 className="font-medium">Your word list</h2>
               <p className="text-sm text-muted">
-                {data.words.length} words ready · {withBlank} with a usable example sentence
+                {data.words.length} words from {sources.length} {sources.length === 1 ? "file" : "files"} · {withBlank} with a usable example sentence
               </p>
             </div>
             <button className="btn-primary" onClick={() => goTo("practice")}>
@@ -134,15 +161,37 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
             <button className="btn-secondary" onClick={() => goTo("words")}>
               View words
             </button>
-            <button className="btn-ghost" onClick={() => confirm("Remove this word list? Your progress for these words is kept.") && clearWords()}>
-              Remove list
+          </div>
+
+          <ul className="mt-4 divide-y divide-line rounded-xl border border-line">
+            {sources.map((s) => (
+              <li key={s.name} className="flex items-center gap-3 px-4 py-2.5">
+                <span className="min-w-0 flex-1 truncate font-medium">{s.name}</span>
+                <span className="text-sm tabular-nums text-muted">{s.count} words</span>
+                <button
+                  className="btn-ghost !py-1 !px-2"
+                  onClick={() => confirm(`Remove the ${s.count} words that came from ${s.name}? Your progress is kept.`) && removeSource(s.name)}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            <button className="btn-secondary !py-1.5" onClick={downloadAll}>
+              Download all words as .txt
+            </button>
+            <button className="btn-ghost !py-1.5" onClick={() => confirm("Remove ALL words from your list? Your progress is kept.") && clearWords()}>
+              Remove all words
             </button>
           </div>
+
           {issues.length > 0 && (
             <div className="mt-5 border-t border-line pt-4">
               <div className="mb-2 flex gap-2">
                 {errors.length > 0 && <Chip tone="bad">{errors.length} lines skipped</Chip>}
-                {warnings.length > 0 && <Chip tone="warn">{warnings.length} warnings</Chip>}
+                {warnings.length > 0 && <Chip tone="warn">{warnings.length} warnings in the last file</Chip>}
               </div>
               <ul className="max-h-56 space-y-1 overflow-auto text-sm">
                 {issues.slice(0, 50).map((i, k) => (

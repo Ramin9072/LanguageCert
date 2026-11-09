@@ -100,3 +100,9 @@ export function parseWordList(text: string): { words: Word[]; issues: Issue[] } 
   }
   return { words, issues };
 }
+
+/** Writes words back in the same file format, for backup or moving to another device. */
+export function formatWordList(words: Word[]): string {
+  const lines = words.map((w) => [w.variants.join("/"), w.meaning, w.example].filter((x, i) => i < 2 || x).join(" | "));
+  return "# word | Persian meaning | example sentence\n\n" + lines.join("\n") + "\n";
+}
