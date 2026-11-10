@@ -1,0 +1,233 @@
+# word | Persian meaning | example sentence
+
+fish | ماهی | Fish live in water.
+birds | پرندگان | Birds have wings and feathers.
+insects | حشرات | Insects have six legs.
+invertebrates | بی‌مهرگان | Invertebrates do not have a backbone.
+mammals | پستانداران | Mammals feed their babies with milk.
+amphibians | دوزیستان | Frogs are amphibians.
+reptiles | خزندگان | Reptiles have dry and scaly skin.
+aquatic animals | جانوران آبزی | Whales are aquatic animals.
+terrestrial animals | جانوران خشکی‌زی | Lions are terrestrial animals.
+rodents | جوندگان | Mice are small rodents.
+oviparous | تخم‌گذار | Birds are oviparous animals.
+crustaceans | سخت‌پوستان | Crabs are crustaceans.
+herbivores | گیاه‌خواران | Cows are herbivores.
+carnivore | گوشت‌خوار | A lion is a carnivore.
+omnivores | همه‌چیزخواران | Bears are omnivores.
+hedgehog | جوجه‌تیغی | The hedgehog has sharp spines.
+porcupine | تشی | A porcupine has long sharp quills.
+skunk | راسو بدبو | A skunk can spray a bad smell.
+chipmunk | سنجاب راه‌راه | A chipmunk collects nuts.
+squirrel | سنجاب | A squirrel climbs trees.
+rabbit | خرگوش | The rabbit eats carrots.
+mouse | موش | A mouse is a small animal.
+rat | موش صحرایی | Rats have long tails.
+mole | موش کور | A mole lives underground.
+meerkat | میرکت، نوعی خدنگ | Meerkats live in groups.
+otter | سمور آبی | An otter swims very well.
+raccoon | راکون | A raccoon has a black mask around its eyes.
+possum | صاریغ | A possum is active at night.
+koala | کوآلا | Koalas eat eucalyptus leaves.
+kangaroo | کانگورو | A kangaroo can jump very high.
+chimpanzee | شامپانزه | Chimpanzees are intelligent animals.
+gorilla | گوریل | A gorilla is a strong animal.
+monkey | میمون | Monkeys can climb trees.
+panda | پاندا | Pandas eat bamboo.
+red panda | پاندای قرمز | The red panda has a bushy tail.
+wombat | وامبت، نوعی کیسه‌دار استرالیایی | A wombat digs holes.
+deer | گوزن | A deer runs fast.
+moose | گوزن شمالی بزرگ، موس | A moose has large antlers.
+gazelle | غزال | A gazelle runs very fast.
+walrus | گراز دریایی | A walrus has long tusks.
+hippopotamus | اسب آبی | A hippopotamus lives near water.
+rhinoceros | کرگدن | A rhinoceros has a horn on its nose.
+leopard | پلنگ | A leopard has beautiful spots.
+tiger | ببر | A tiger has black stripes.
+bat | خفاش | A bat can fly at night.
+llama | لاما، شتر بی‌کوهان آمریکای جنوبی | A llama lives in the mountains.
+wolf | گرگ | A wolf lives in a pack.
+clown fish | ماهی دلقک | A clown fish lives among sea anemones.
+platypus | پلاتیپوس، نوک‌اردکی | A platypus lays eggs.
+shark | کوسه | A shark has many sharp teeth.
+whale | نهنگ | A whale is a very large mammal.
+dolphin | دلفین | Dolphins are intelligent sea animals.
+salmon | ماهی سالمون، آزادماهی | Salmon swim upstream to lay eggs.
+turtle | لاک‌پشت | A turtle has a hard shell.
+snake | مار | A snake has no legs.
+worm | کرم | A worm lives in the soil.
+alligator | تمساح آمریکایی، الیگیتور | An alligator lives in freshwater.
+lizard | مارمولک | A lizard has four legs.
+crocodile | کروکودیل، تمساح | A crocodile has a long tail.
+vulture | کرکس | A vulture eats dead animals.
+crane | درنا، نوعی پرنده بلندپا | A crane has long legs.
+eagle | عقاب | An eagle has strong wings.
+owl | جغد | An owl can see well at night.
+falcon | شاهین | A falcon flies very fast.
+fairy | پری | The fairy has magical powers.
+penguin | پنگوئن | Penguins cannot fly, but they can swim.
+kiwi | کیوی، پرنده بومی نیوزیلند | The kiwi is a flightless bird.
+scorpion | عقرب | A scorpion has a poisonous sting.
+tarantula | رتیل | A tarantula is a large spider.
+fly | مگس | A fly has six legs.
+grasshopper | ملخ | A grasshopper can jump high.
+beetle | سوسک، قاب‌بال | A beetle has a hard outer shell.
+mosquito | پشه | A mosquito can bite people.
+butterfly | پروانه | A butterfly has colorful wings.
+ant | مورچه | An ant is a hardworking insect.
+frog | قورباغه | A frog can jump and swim.
+toad | وزغ | A toad has dry and bumpy skin.
+newt | سمندر آبی کوچک | A newt can live in water and on land.
+salamander | سمندر | A salamander has a long body.
+alpine newt | سمندر آلپی | The alpine newt lives in mountain areas.
+shrimp | میگو | Shrimp live in water.
+crab | خرچنگ | A crab walks sideways.
+grain | غلات، دانه‌های خوراکی | Rice is a type of grain.
+vegetables | سبزیجات | Vegetables are good for our health.
+fruits | میوه‌ها | Fruits contain vitamins.
+oils | روغن‌ها | We use oils for cooking.
+nuts and seeds | مغزها و دانه‌ها | Nuts and seeds contain healthy fats.
+vitamin | ویتامین | Vitamin C helps keep us healthy.
+protein | پروتئین | Protein helps build muscles.
+calcium | کلسیم | Calcium makes our bones strong.
+fiber | فیبر، الیاف غذایی | Fiber helps digestion.
+fat | چربی | Our body needs some fat.
+mineral | ماده معدنی | Iron is an important mineral.
+carbohydrate | کربوهیدرات، مواد قندی و نشاسته‌ای | Bread contains carbohydrates.
+apricot | زردآلو | I eat an apricot every morning.
+nectarine | شلیل | A nectarine has smooth skin.
+plum | آلو | The plum is sweet and juicy.
+peach | هلو | The peach has soft skin.
+coconut | نارگیل | Coconut has hard brown skin.
+pineapple | آناناس | Pineapple tastes sweet and sour.
+mango | انبه | Mango is a tropical fruit.
+cucumber | خیار | Cucumber contains a lot of water.
+banana | موز | Monkeys like bananas.
+pomegranate | انار | A pomegranate has many red seeds.
+quince | به | Quince is often used to make jam.
+pear | گلابی | The pear is soft and juicy.
+avocado | آووکادو | Avocado contains healthy fats.
+lychee | لیچی، سرخالو | Lychee has sweet white flesh.
+passion fruit | میوه گل ساعتی، پشن‌فروت | Passion fruit has a strong flavor.
+papaya | پاپایا | Papaya grows in tropical countries.
+lime | لیموترش سبز | Lime has a sour taste.
+lemon | لیموترش زرد | I put lemon in my tea.
+orange | پرتقال | Orange is rich in vitamin C.
+tangerine | نارنگی | Tangerines are easy to peel.
+melon | خربزه، طالبی | Melon is sweet and juicy.
+watermelon | هندوانه | Watermelon is a refreshing summer fruit.
+grape | انگور | Grapes grow in bunches.
+cherry | گیلاس | A cherry is small and red.
+blackcurrant | انگورفرنگی سیاه | Blackcurrants are rich in vitamin C.
+mulberry | توت | Mulberries grow on trees.
+blackberry | تمشک سیاه | Blackberries are dark and juicy.
+strawberry | توت‌فرنگی | Strawberries are red and sweet.
+raspberry | تمشک قرمز | Raspberries are soft and sweet.
+tomato | گوجه‌فرنگی | A tomato is red and juicy.
+potato | سیب‌زمینی | We can make fries with potatoes.
+onion | پیاز | Onion makes our eyes water.
+beetroot | چغندر، لبو | Beetroot has a deep red color.
+garlic | سیر | Garlic has a strong smell.
+mushroom | قارچ | Mushrooms grow in damp places.
+carrot | هویج | Rabbits like carrots.
+pumpkin | کدو تنبل | A pumpkin is often orange.
+bell pepper | فلفل دلمه‌ای | Bell peppers can be red, green, or yellow.
+cabbage | کلم | Cabbage has many green leaves.
+broccoli | کلم بروکلی | Broccoli is a healthy vegetable.
+cauliflower | گل کلم | Cauliflower looks like a white flower.
+eggplant | بادمجان | Eggplant is often purple.
+zucchini | کدو سبز | Zucchini is easy to cook.
+celery | کرفس | Celery has long green stalks.
+rosemary | رزماری، اکلیل کوهی | Rosemary gives food a nice smell.
+spinach | اسفناج | Spinach contains iron.
+parsley | جعفری | Parsley is used in cooking.
+mint | نعناع | Mint has a fresh smell.
+peas | نخودفرنگی | Peas are small and green.
+green beans | لوبیا سبز | Green beans are used in many dishes.
+corn | ذرت | Corn grows on a plant.
+astronomy | اخترشناسی، علم ستاره‌شناسی | Astronomy is the study of space.
+mercury | عطارد | Mercury is the closest planet to the Sun.
+venus | زهره | Venus is very hot.
+earth | زمین | Earth is our home planet.
+mars | مریخ | Mars is called the Red Planet.
+jupiter | مشتری | Jupiter is the largest planet.
+saturn | زحل | Saturn has beautiful rings.
+uranus | اورانوس | Uranus is a very cold planet.
+neptune | نپتون | Neptune is far from the Sun.
+pluto | پلوتون | Pluto is a dwarf planet.
+orbit | مدار | The Earth moves in an orbit around the Sun.
+sun | خورشید | The Sun gives us light and heat.
+planet | سیاره | A planet moves around a star.
+solar system | منظومه شمسی | Our solar system has eight planets.
+galaxy | کهکشان | A galaxy contains many stars.
+milky way | کهکشان راه شیری | Our solar system is in the Milky Way.
+asteroid | سیارک | An asteroid is a small rocky object in space.
+meteor | شهاب | A meteor can look like a shooting star.
+black hole | سیاه‌چاله | A black hole has very strong gravity.
+wormhole | کرم‌چاله | A wormhole is a theoretical tunnel in space-time.
+rocket | موشک | A rocket can travel into space.
+spaceship | سفینه فضایی | The spaceship travels through space.
+satellite | ماهواره | A satellite moves around a planet.
+constellation | صورت فلکی | Orion is a famous constellation.
+solar eclipse | خورشیدگرفتگی، کسوف | A solar eclipse happens when the Moon blocks the Sun.
+lunar eclipse | ماه‌گرفتگی، خسوف | A lunar eclipse happens when the Earth blocks sunlight from reaching the Moon.
+atmosphere | جو، اتمسفر | The Earth's atmosphere contains air.
+astronomer | اخترشناس، ستاره‌شناس | An astronomer studies stars and planets.
+astronaut | فضانورد | An astronaut travels into space.
+alien | موجود فضایی، بیگانه | Some people believe that aliens exist.
+telescope | تلسکوپ، دوربین نجومی | We use a telescope to see distant stars.
+gravity | جاذبه، گرانش | Gravity keeps us on the ground.
+Shoulder | شانه | My shoulder hurts.
+Chest | قفسه سینه | My chest hurts.
+Arm | بازو | I have two arms.
+Waist | کمر | My waist is small.
+Wrist | مچ دست | I wear a watch on my wrist.
+Thigh | ران | My thigh hurts.
+Knee | زانو | My knee hurts.
+Foot | پا | I have two feet.
+Toe | انگشت پا | I have five toes.
+Elbow | آرنج | My elbow hurts.
+Hand | دست | Wash your hands.
+Stomach | شکم | My stomach hurts.
+Leg | پا | My legs are strong.
+Heel | پاشنه پا | My heel hurts.
+Toenail | ناخن پا | My toenail is short.
+Thumb | انگشت شست دست | I use my thumb.
+Index finger | انگشت اشاره | This is my index finger.
+Middle finger | انگشت وسط | My middle finger is long.
+Ring finger | انگشت حلقه | I wear a ring on my ring finger.
+Little finger | انگشت کوچک | My little finger is small.
+Palm | کف دست | Look at my palm.
+Nail | ناخن | My nail is long.
+Forearm | ساعد | My forearm is strong.
+Fist | مشت | Make a fist.
+Calf | ماهیچه پشت ساق پا | My calf hurts.
+Shin | جلوی ساق پا | My shin hurts.
+Ankle | مچ پا | I hurt my ankle.
+Head | سر | My head hurts.
+Eye | چشم | I have two eyes.
+Nose | بینی | My nose is small.
+Tip | نوک | Touch the tip of your nose.
+Nostril | سوراخ بینی | I have two nostrils.
+Tooth | دندان | I have a white tooth.
+Lips | لب‌ها | My lips are dry.
+Mouth | دهان | Open your mouth.
+Hair | مو | My hair is long.
+Ear | گوش | I have two ears.
+Cheek | گونه | My cheek is red.
+Neck | گردن | My neck hurts.
+Jaw | فک | My jaw hurts.
+Eyebrow | ابرو | My eyebrows are black.
+Eyelid | پلک | Close your eyelids.
+Pupil | مردمک چشم | My pupils are black.
+Sclera | سفیدی چشم | The sclera is white.
+Iris | عنبیه چشم | My iris is brown.
+Eyelash | مژه | Her eyelashes are long.
+External auditory canal | مجرای گوش خارجی | Sound enters the ear canal.
+Outer ear | گوش خارجی | I can see my outer ear.
+Incus | استخوان سندانی گوش | The incus is in the middle ear.
+Malleus | استخوان چکشی گوش | The malleus is a small bone.
+Stapes | استخوان رکابی گوش | The stapes is very small.
+Middle ear | گوش میانی | The middle ear has three small bones.
+Tympanic membrane | پرده گوش | The tympanic membrane is very thin.
+Auditory ossicles | استخوانچه‌های شنوایی | The auditory ossicles help us hear.
