@@ -30,9 +30,14 @@ The app has a **Download sample file** button and a **Try the sample words** but
 | English to Persian | See a word (and hear it), pick the meaning from four choices. | Wrong choices are other meanings from your list. |
 | Persian to English | See the meaning, type the English word. | Exact match, ignoring case and spaces. One or two wrong letters count as "Almost". |
 | Fill in the blank | Your example sentence with the word removed. Type the missing word. | Must match the form used in the sentence. The base form gives "Almost, wrong form". |
-| Listening | Hear the word, type how it is spelled. | Same as Persian to English. |
+| Listening | Hear the word, type how it is spelled. If the word is hard to understand, a tip button plays it inside your example sentence. | Same as Persian to English. |
+| My mistakes | Pick the correct spelling among your own earlier wrong spellings of that word (plus typical misspellings if there are few). | Wrong spellings you type in the typing exercises are remembered automatically, so this exercise unlocks after your first typo. |
 
-After each answer you see the result, the differing letters highlighted, the right answer, the word's meaning and example, and can play the audio. **Try again** and **Next exercise** are always available. Words you miss come up more often in later sessions.
+After each answer you see the result, the differing letters highlighted, the right answer, the word's meaning and example, and can play the audio. **Try again** and **Next exercise** are always available. Words you miss come up more often in later sessions, and "Words I missed" lets you practice only those.
+
+## Navigation
+
+Every screen has its own address (`#import`, `#words`, `#practice`), so the browser **Back** and **Forward** buttons work, including leaving a practice session or the results screen. The header also has a **← Back** button and the WordWise logo returns to the main screen.
 
 Every file you upload is **added** to your saved list, so your words build up over time. Importing a file with the same name again replaces that file's words (handy after fixing a typo), and a word that is already in your list from another file is not added twice. You can remove one file's words, remove everything, or download the whole list as a backup. Only the first attempt at a question counts toward your progress. Progress and your word list are saved in the browser (`localStorage`), so they are per browser.
 

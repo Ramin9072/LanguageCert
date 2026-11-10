@@ -1,7 +1,7 @@
 "use client";
 
 import { KeyboardEvent, ReactNode, useEffect, useRef, useState } from "react";
-import { checkTyped, diffChars, Verdict } from "@/lib/check";
+import { checkTyped, diffChars, norm, plausibleSlip, Verdict } from "@/lib/check";
 import { exerciseTitle, Question, Result } from "@/lib/practice";
 import type { Word } from "@/lib/types";
 import { useApp } from "./AppProvider";
@@ -12,6 +12,7 @@ interface Props {
   words: Map<string, Word>;
   autoPlay: boolean;
   onRecord: (wordId: string, correct: boolean) => void;
+  onMistake: (wordId: string, text: string) => void;
   onFinish: (results: Result[]) => void;
   onExit: () => void;
 }
@@ -40,8 +41,8 @@ const OPTION = {
   dim: "border-line opacity-60",
 } as const;
 
-export default function PracticeSession({ questions, words, autoPlay, onRecord, onFinish, onExit }: Props) {
-  const { speak, speechOk } = useApp();
+export default function PracticeSession({ questions, words, autoPlay, onRecord, onMistake, onFinish, onExit }: Props) {
+  const { speak, speechOk, data } = useApp();
   const [i, setI] = useState(0);
   const [answer, setAnswer] = useState("");
   const [choice, setChoice] = useState<number | null>(null);
@@ -55,6 +56,10 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
   const word = words.get(q.wordId)!;
   const last = i === questions.length - 1;
   const answered = verdict !== null;
+
+  const choiceType = q.type === "en-to-fa" || q.type === "mistakes"; // multiple choice
+  const typed = !choiceType;
+  const correctOption = q.type === "mistakes" ? word.word : word.meaning;
 
   // read the word aloud when the question appears
   useEffect(() => {
@@ -80,7 +85,7 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
     if (answered) return;
     const given = q.options![idx];
     setChoice(idx);
-    finish({ kind: given === word.meaning ? "correct" : "wrong", target: word.meaning }, given);
+    finish({ kind: given === correctOption ? "correct" : "wrong", target: correctOption }, given);
   }
 
   function submit() {
@@ -88,7 +93,12 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
     if (!a) return setError("Type your answer first.");
     setError("");
     const fill = q.type === "fill-blank";
-    finish(checkTyped(a, fill ? [word.blank!.answer] : word.variants, fill ? word.variants : []), a);
+    const accepted = fill ? [word.blank!.answer] : word.variants;
+    const v = checkTyped(a, accepted, fill ? word.variants : []);
+    finish(v, a);
+    // remember wrong spellings of the word itself, so they can be tested later in "My mistakes"
+    const sameForm = !fill || word.variants.some((x) => norm(x) === norm(word.blank!.answer));
+    if (v.kind !== "correct" && sameForm && plausibleSlip(a, v.target, word.variants)) onMistake(word.id, norm(a));
   }
 
   function reset() {
@@ -153,6 +163,16 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
         </Fa>
       </>
     );
+  } else if (q.type === "mistakes") {
+    prompt = (
+      <>
+        <div className="text-sm text-muted">Which spelling is correct?</div>
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          <Fa className="text-3xl font-medium">{word.meaning}</Fa>
+          <SpeakButton text={word.word} />
+        </div>
+      </>
+    );
   } else {
     prompt = (
       <>
@@ -161,19 +181,27 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
           <SpeakButton text={word.word} label="Listen" />
           <SpeakButton text={word.word} slow />
         </div>
+        {word.example && (
+          <div className="mt-4 rounded-xl bg-paper px-4 py-3 text-sm text-ink/80">
+            <div className="mb-2">Tip: if the word is hard to understand, hear it inside a sentence.</div>
+            <SpeakButton text={word.example} label="Play it in a sentence" />
+          </div>
+        )}
       </>
     );
   }
 
-  const typed = q.type !== "en-to-fa";
-  const diff = verdict && typed && verdict.kind !== "correct" ? diffChars(submitted, verdict.target) : null;
+  const showDiff = verdict && (typed || q.type === "mistakes") && verdict.kind !== "correct";
+  const diff = showDiff ? diffChars(submitted, verdict.target) : null;
   const banner = verdict ? BANNER[verdict.kind] : null;
+  const wroteBefore =
+    q.type === "mistakes" && verdict?.kind === "wrong" && (data.stats[word.id]?.mistakes ?? []).includes(norm(submitted));
 
   return (
     <div className="mx-auto max-w-2xl space-y-5">
       <div className="flex items-center gap-3">
         <button className="btn-ghost !px-2" onClick={() => confirm("Leave this session? Answers you already gave are saved.") && onExit()}>
-          Exit
+          ← Back
         </button>
         <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-black/10">
           <div className="h-full rounded-full bg-accent transition-all" style={{ width: `${((i + (answered ? 1 : 0)) / questions.length) * 100}%` }} />
@@ -190,10 +218,10 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
 
         {prompt}
 
-        {q.type === "en-to-fa" && (
+        {choiceType && (
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {q.options!.map((opt, idx) => {
-              const s = !answered ? "idle" : opt === word.meaning ? "right" : idx === choice ? "wrong" : "dim";
+              const s = !answered ? "idle" : opt === correctOption ? "right" : idx === choice ? "wrong" : "dim";
               return (
                 <button
                   key={idx}
@@ -201,7 +229,13 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
                   onClick={() => pick(idx)}
                   className={`rounded-xl border px-4 py-3 text-center text-lg transition-colors ${OPTION[s]}`}
                 >
-                  <Fa>{opt}</Fa>
+                  {q.type === "mistakes" ? (
+                    <span dir="ltr" className="text-xl">
+                      {opt}
+                    </span>
+                  ) : (
+                    <Fa>{opt}</Fa>
+                  )}
                 </button>
               );
             })}
@@ -235,10 +269,13 @@ export default function PracticeSession({ questions, words, autoPlay, onRecord, 
           <div className="mt-6 space-y-4 border-t border-line pt-6">
             <div className={`rounded-xl px-4 py-3 text-lg font-semibold ${banner.cls}`}>{banner.label}</div>
 
-            {typed && verdict.kind !== "correct" && (
-              <Block label="Your answer">{diff ? <Diff parts={diff.typed} cls="mk-err" /> : submitted}</Block>
+            {(typed || q.type === "mistakes") && verdict.kind !== "correct" && (
+              <Block label={q.type === "mistakes" ? "You chose" : "Your answer"}>
+                {diff ? <Diff parts={diff.typed} cls="mk-err" /> : submitted}
+              </Block>
             )}
-            {typed && (
+            {wroteBefore && <p className="text-sm text-warn">This is a spelling you wrote wrong before. Look at the marked letters.</p>}
+            {(typed || q.type === "mistakes") && (
               <Block label="Correct answer">
                 {q.type === "fill-blank" ? (
                   <span>

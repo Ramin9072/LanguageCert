@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Tab } from "@/lib/types";
+import { ownMistakes } from "@/lib/practice";
 import { useApp } from "./AppProvider";
 import { Chip, EmptyState, Example, Fa, SpeakButton } from "./ui";
 
@@ -89,6 +90,11 @@ export default function WordsView({ goTo }: { goTo: (t: Tab) => void }) {
                   )}
                 </div>
                 <Fa className="mt-3 text-xl font-medium">{w.meaning}</Fa>
+                {ownMistakes(w, s).length > 0 && (
+                  <p dir="ltr" className="mt-2 text-sm text-bad">
+                    You wrote: {ownMistakes(w, s).join(", ")}
+                  </p>
+                )}
                 {w.example && (
                   <div className="mt-3 flex items-start gap-2 border-l-2 border-line pl-3">
                     <p dir="ltr" className="flex-1 text-[15px] italic text-ink/80">

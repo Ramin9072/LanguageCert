@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AppProvider, useApp } from "@/components/AppProvider";
 import ImportView from "@/components/ImportView";
 import Practice from "@/components/Practice";
 import WordsView from "@/components/WordsView";
+import { pushHash, readHash, replaceHash } from "@/lib/nav";
 import type { Accent, Tab } from "@/lib/types";
 
 const TABS: { id: Tab; label: string }[] = [
@@ -20,31 +21,56 @@ const ACCENTS: { id: Accent; label: string; title: string }[] = [
 
 function Shell() {
   const [tab, setTab] = useState<Tab>("import");
+  const [trail, setTrail] = useState<Tab[]>(["import"]); // screens visited in this session, for the Back button
   const [focus, setFocus] = useState(false);
   const { data, hydrated, setAccent, speechOk } = useApp();
 
-  // returning users with a saved list start on Practice
+  // Each screen has its own address (#import, #words, #practice), so the browser Back and Forward buttons work.
+  useEffect(() => {
+    const onHash = () => {
+      const { tab: t } = readHash();
+      if (!t) return;
+      setTab(t);
+      setTrail((tr) => (tr[tr.length - 1] === t ? tr : tr.length > 1 && tr[tr.length - 2] === t ? tr.slice(0, -1) : [...tr, t]));
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  // first screen: the one in the address, otherwise Practice if you already have words, otherwise Import
   const started = useRef(false);
   useEffect(() => {
-    if (hydrated && !started.current) {
-      started.current = true;
-      if (data.words.length > 0) setTab("practice");
-    }
+    if (!hydrated || started.current) return;
+    started.current = true;
+    const { tab: t, sub } = readHash();
+    const first: Tab = t ?? (data.words.length > 0 ? "practice" : "import");
+    if (!t || sub) replaceHash(first); // a session address like #practice/run cannot be restored after a reload
+    setTab(first);
+    setTrail([first]);
   }, [hydrated, data.words.length]);
 
-  const go = (t: Tab) => {
+  const go = useCallback((t: Tab) => {
+    pushHash(t);
     setTab(t);
+    setTrail((tr) => (tr[tr.length - 1] === t ? tr : [...tr, t]));
     window.scrollTo({ top: 0 });
-  };
+  }, []);
+
+  const home = () => go(data.words.length > 0 ? "practice" : "import");
 
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-10 border-b border-line bg-paper/85 backdrop-blur">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3 sm:px-6">
-          <div className="flex items-center gap-2.5">
+          {!focus && trail.length > 1 && (
+            <button className="btn-ghost !px-2" onClick={() => window.history.back()} aria-label="Go back to the previous screen">
+              ← Back
+            </button>
+          )}
+          <button onClick={home} className="flex items-center gap-2.5" aria-label="WordWise home">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-ink font-display text-2xl leading-none text-white">W</span>
             <span className="font-display text-3xl leading-none">WordWise</span>
-          </div>
+          </button>
           <div className="ml-auto flex items-center gap-3">
             {!focus && (
               <nav aria-label="Sections" className="flex gap-1 rounded-xl bg-black/5 p-1">

@@ -84,3 +84,11 @@ export function diffChars(typed: string, target: string): { typed: Part[]; targe
   }
   return { typed: t, target: g };
 }
+
+/** True when a wrong answer looks like a spelling slip of the target (not a random guess), so it is worth remembering. */
+export function plausibleSlip(answer: string, target: string, accepted: string[]): boolean {
+  const a = norm(answer);
+  if (a.length < 2 || a.length > 40 || !/^[a-z][a-z'\- ]*$/.test(a)) return false;
+  if (accepted.some((t) => norm(t) === a)) return false;
+  return levenshtein(a, norm(target)) <= Math.max(2, Math.floor(norm(target).length / 2));
+}

@@ -1,7 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { buildQuestions, eligibleWords, EXERCISES, exerciseTitle, Question, Result, Settings } from "@/lib/practice";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { pushHash, readHash, replaceHash } from "@/lib/nav";
+import {
+  buildQuestions,
+  eligibleWords,
+  EXERCISES,
+  exerciseTitle,
+  isMissed,
+  poolFor,
+  Question,
+  Result,
+  Scope,
+  Settings,
+} from "@/lib/practice";
 import { computeStats } from "@/lib/stats";
 import type { Tab } from "@/lib/types";
 import { useApp } from "./AppProvider";
@@ -11,12 +23,13 @@ import { Chip, EmptyState, ErrorBox, Stat } from "./ui";
 type Phase = "setup" | "running" | "summary";
 
 export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => void; onFocusChange: (f: boolean) => void }) {
-  const { data, hydrated, record, resetProgress, speechOk, hasVoice } = useApp();
+  const { data, hydrated, record, addMistake, resetProgress, speechOk, hasVoice } = useApp();
   const { words, stats: wordStats } = data;
   const stats = useMemo(() => computeStats(words, wordStats), [words, wordStats]);
   const wordMap = useMemo(() => new Map(words.map((w) => [w.id, w])), [words]);
+  const missedCount = useMemo(() => words.filter((w) => isMissed(wordStats[w.id])).length, [words, wordStats]);
 
-  const [settings, setSettings] = useState<Settings>({ type: "mixed", count: 10, useSelected: false, selected: [], autoPlay: true });
+  const [settings, setSettings] = useState<Settings>({ type: "mixed", count: 10, scope: "all", selected: [], autoPlay: true });
   const [phase, setPhase] = useState<Phase>("setup");
   const [error, setError] = useState("");
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -24,29 +37,55 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
   const [filter, setFilter] = useState("");
   const [session, setSession] = useState(0);
 
+  const phaseRef = useRef<Phase>("setup");
+  phaseRef.current = phase;
+
   useEffect(() => onFocusChange(phase === "running"), [phase, onFocusChange]);
   useEffect(() => {
     setSettings((s) => ({ ...s, selected: s.selected.filter((id) => wordMap.has(id)) }));
   }, [wordMap]);
 
+  // The browser Back button leaves a running session or the results screen and returns to the setup screen.
+  useEffect(() => {
+    const onHash = () => {
+      const { sub } = readHash();
+      if (phaseRef.current === "running" && sub !== "run") setPhase("setup");
+      if (phaseRef.current === "summary" && sub !== "done") setPhase("setup");
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  const backToSetup = useCallback(() => {
+    const { sub } = readHash();
+    if (sub === "run" || sub === "done") window.history.back();
+    setPhase("setup");
+  }, []);
+
   function start(s: Settings = settings) {
     setError("");
     const qs = buildQuestions(words, s, wordStats, speechOk);
     if (qs.length === 0) {
-      const t = s.type;
+      const pool = poolFor(words, s, wordStats);
       setError(
-        s.useSelected && s.selected.length === 0
+        s.scope === "selected" && s.selected.length === 0
           ? "Select at least one word to practice."
-          : t === "fill-blank"
-            ? "None of these words has an example sentence that contains the word. Add examples to your file."
-            : t === "listening"
-              ? "Your browser does not support speech, so listening exercises are not available."
-              : t === "en-to-fa"
-                ? "This exercise needs at least two words with different meanings."
-                : "No exercises could be built from these words."
+          : s.scope === "missed" && pool.length === 0
+            ? "You have not missed any words yet."
+            : s.type === "mistakes"
+              ? "No misspelled words yet. This exercise appears after you mistype a word in a typing exercise."
+              : s.type === "fill-blank"
+                ? "None of these words has an example sentence that contains the word. Add examples to your file."
+                : s.type === "listening"
+                  ? "Your browser does not support speech, so listening exercises are not available."
+                  : s.type === "en-to-fa"
+                    ? "This exercise needs at least two words with different meanings."
+                    : "No exercises could be built from these words."
       );
       return;
     }
+    if (phaseRef.current === "summary") replaceHash("practice/run");
+    else pushHash("practice/run");
     setQuestions(qs);
     setResults([]);
     setSession((n) => n + 1);
@@ -76,11 +115,13 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
         words={wordMap}
         autoPlay={settings.autoPlay}
         onRecord={record}
+        onMistake={addMistake}
         onFinish={(r) => {
           setResults(r);
+          replaceHash("practice/done");
           setPhase("summary");
         }}
-        onExit={() => setPhase("setup")}
+        onExit={backToSetup}
       />
     );
   }
@@ -104,7 +145,7 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
               <button
                 className="btn-secondary"
                 onClick={() => {
-                  const s = { ...settings, useSelected: true, selected: missed };
+                  const s: Settings = { ...settings, scope: "selected", selected: missed };
                   setSettings(s);
                   start(s);
                 }}
@@ -112,8 +153,8 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
                 Practice missed words
               </button>
             )}
-            <button className="btn-ghost" onClick={() => setPhase("setup")}>
-              Back to dashboard
+            <button className="btn-ghost" onClick={backToSetup}>
+              ← Back to practice
             </button>
           </div>
         </div>
@@ -132,10 +173,18 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
   }
 
   // ---- dashboard and settings
-  const pool = settings.useSelected ? words.filter((w) => settings.selected.includes(w.id)) : words;
+  const pool = poolFor(words, settings, wordStats);
   const visible = words.filter((w) => !filter || w.variants.some((v) => v.toLowerCase().includes(filter.toLowerCase())));
   const toggle = (id: string) =>
     setSettings((s) => ({ ...s, selected: s.selected.includes(id) ? s.selected.filter((x) => x !== id) : [...s.selected, id] }));
+  const setScope = (scope: Scope) =>
+    setSettings((s) => ({ ...s, scope, selected: scope === "selected" && s.selected.length === 0 ? words.map((x) => x.id) : s.selected }));
+
+  const SCOPES: { id: Scope; label: string; disabled?: boolean }[] = [
+    { id: "all", label: `All words (${words.length})` },
+    { id: "missed", label: `Words I missed (${missedCount})`, disabled: missedCount === 0 },
+    { id: "selected", label: "Only selected words" },
+  ];
 
   return (
     <div className="space-y-6">
@@ -150,7 +199,7 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
           {stats.completed > 0 && (
             <button
               className="btn-ghost ml-auto !py-1 !px-2"
-              onClick={() => confirm("Reset all practice progress in this browser?") && resetProgress()}
+              onClick={() => confirm("Reset all practice progress, including remembered misspellings, in this browser?") && resetProgress()}
             >
               Reset progress
             </button>
@@ -184,7 +233,7 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
           <h2 className="mb-3 font-medium">Exercise type</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {[{ type: "mixed" as const, title: "Mixed", blurb: "A bit of everything, in random order." }, ...EXERCISES].map((e) => {
-              const disabled = e.type !== "mixed" && eligibleWords(e.type, pool, words, speechOk).length === 0;
+              const disabled = e.type !== "mixed" && eligibleWords(e.type, pool, words, speechOk, wordStats).length === 0;
               return (
                 <button
                   key={e.type}
@@ -202,7 +251,9 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
                         ? "Not available: this browser has no speech support."
                         : e.type === "fill-blank"
                           ? "Not available: no example sentence contains its word."
-                          : "Not available for these words."
+                          : e.type === "mistakes"
+                            ? "Not available yet: it unlocks when you misspell a word while typing."
+                            : "Not available for these words."
                       : e.blurb}
                   </div>
                 </button>
@@ -258,30 +309,22 @@ export default function Practice({ goTo, onFocusChange }: { goTo: (t: Tab) => vo
 
         <div>
           <h2 className="mb-3 font-medium">Words</h2>
-          <div className="flex gap-2">
-            {[
-              { v: false, label: `All words (${words.length})` },
-              { v: true, label: "Only selected words" },
-            ].map((o) => (
+          <div className="flex flex-wrap gap-2">
+            {SCOPES.map((o) => (
               <button
-                key={String(o.v)}
-                aria-pressed={settings.useSelected === o.v}
-                onClick={() =>
-                  setSettings((s) => ({
-                    ...s,
-                    useSelected: o.v,
-                    selected: o.v && s.selected.length === 0 ? words.map((x) => x.id) : s.selected,
-                  }))
-                }
-                className={`rounded-xl border px-4 py-2 text-sm font-medium transition-colors ${
-                  settings.useSelected === o.v ? "border-accent bg-accent-soft" : "border-line hover:bg-paper"
+                key={o.id}
+                disabled={o.disabled}
+                aria-pressed={settings.scope === o.id}
+                onClick={() => setScope(o.id)}
+                className={`rounded-xl border px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+                  settings.scope === o.id ? "border-accent bg-accent-soft" : "border-line hover:bg-paper"
                 }`}
               >
                 {o.label}
               </button>
             ))}
           </div>
-          {settings.useSelected && (
+          {settings.scope === "selected" && (
             <div className="mt-3 rounded-xl border border-line p-3">
               <div className="mb-2 flex flex-wrap items-center gap-2">
                 <input className="input !w-auto !py-1.5 !text-sm" placeholder="Filter words" value={filter} onChange={(e) => setFilter(e.target.value)} />

@@ -1,4 +1,4 @@
-export type ExerciseType = "en-to-fa" | "fa-to-en" | "fill-blank" | "listening";
+export type ExerciseType = "en-to-fa" | "fa-to-en" | "fill-blank" | "listening" | "mistakes";
 export type Tab = "import" | "words" | "practice";
 export type Accent = "en-US" | "en-GB";
 
@@ -22,4 +22,5 @@ export interface WordStat {
   correct: number;
   incorrect: number;
   last: number;
+  mistakes?: string[]; // wrong spellings you typed for this word, newest first
 }

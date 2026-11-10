@@ -21,6 +21,7 @@ interface Ctx {
   removeSource: (source: string) => void;
   clearWords: () => void;
   record: (wordId: string, correct: boolean) => void;
+  addMistake: (wordId: string, text: string) => void;
   resetProgress: () => void;
   setAccent: (a: Accent) => void;
   speak: (text: string, slow?: boolean) => void;
@@ -121,6 +122,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         stats: {
           ...d.stats,
           [wordId]: {
+            ...s,
             attempts: s.attempts + 1,
             correct: s.correct + (correct ? 1 : 0),
             incorrect: s.incorrect + (correct ? 0 : 1),
@@ -131,12 +133,21 @@ export function AppProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  // remembers a wrong spelling so it can come back in the "My mistakes" exercise
+  const addMistake = useCallback((wordId: string, text: string) => {
+    setData((d) => {
+      const s = d.stats[wordId] ?? { attempts: 0, correct: 0, incorrect: 0, last: 0 };
+      const list = [text, ...(s.mistakes ?? []).filter((m) => m !== text)].slice(0, 6);
+      return { ...d, stats: { ...d.stats, [wordId]: { ...s, mistakes: list } } };
+    });
+  }, []);
+
   const speak = useCallback((text: string, slow = false) => speakText(text, data.accent, voices, slow), [data.accent, voices]);
   const hasVoice = useMemo(() => !!pickVoice(voices, data.accent), [voices, data.accent]);
 
   const value = useMemo(
-    () => ({ data, hydrated, addWords, removeSource, clearWords, record, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull }),
-    [data, hydrated, addWords, removeSource, clearWords, record, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull]
+    () => ({ data, hydrated, addWords, removeSource, clearWords, record, addMistake, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull }),
+    [data, hydrated, addWords, removeSource, clearWords, record, addMistake, resetProgress, setAccent, speak, speechOk, hasVoice, storageFull]
   );
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
