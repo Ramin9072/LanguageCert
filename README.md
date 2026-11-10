@@ -2,7 +2,7 @@
 
 Vocabulary quizzes built from **your own word list**. You write the words, their Persian meanings and an example sentence in a `.txt` file. WordWise turns that into exercises and reads the words aloud in an American or British accent.
 
-There is **no AI, no API key, no database and no server code**. Everything runs in the browser and the project deploys to Vercel as a static Next.js site.
+There is **no AI, no API key and no database**. Everything runs in the browser, with one small optional server route that only downloads GitHub files for you. It deploys to Vercel as a normal Next.js project.
 
 ## Word file format
 
@@ -22,6 +22,12 @@ look forward to | مشتاقانه منتظر بودن | I look forward to meeti
 - Up to 500 words and 200 KB per file. Problems are listed by line number after import. Valid lines are still imported.
 
 The app has a **Download sample file** button and a **Try the sample words** button.
+
+## Importing from GitHub
+
+Instead of uploading a file from your computer you can paste the link of a `.txt` file in a **public** GitHub repository (or a gist) into the Import screen. The normal page link (`https://github.com/user/repo/blob/main/words.txt`) and the Raw link both work. After importing, the file shows an **Update from GitHub** button: after you change the file on GitHub, one click downloads it again and replaces that file's words.
+
+The browser downloads the file directly. If your network blocks GitHub's file host, the app falls back to a small server route (`app/api/github`) that downloads it for you; it only contacts `raw.githubusercontent.com` and `gist.githubusercontent.com`. Private repositories are not supported.
 
 ## Exercises
 

@@ -8,16 +8,17 @@ const KEY = "wordwise:v2";
 
 interface Stored {
   words: Word[];
+  urls: Record<string, string>; // GitHub link each file was imported from, so it can be updated later
   stats: Record<string, WordStat>;
   accent: Accent;
 }
 
-const EMPTY: Stored = { words: [], stats: {}, accent: "en-US" };
+const EMPTY: Stored = { words: [], urls: {}, stats: {}, accent: "en-US" };
 
 interface Ctx {
   data: Stored;
   hydrated: boolean;
-  addWords: (source: string, words: Word[]) => { added: number; skipped: number; replaced: number };
+  addWords: (source: string, words: Word[], url?: string) => { added: number; skipped: number; replaced: number };
   removeSource: (source: string) => void;
   clearWords: () => void;
   record: (wordId: string, correct: boolean) => void;
@@ -66,6 +67,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const legacy = (typeof p.fileName === "string" && p.fileName) || "Earlier import";
         setData({
           words: Array.isArray(p.words) ? p.words.filter(validWord).map((w) => ({ ...w, source: w.source || legacy })) : [],
+          urls: p.urls && typeof p.urls === "object" ? p.urls : {},
           stats: p.stats && typeof p.stats === "object" ? p.stats : {},
           accent: p.accent === "en-GB" ? "en-GB" : "en-US",
         });
@@ -100,17 +102,28 @@ export function AppProvider({ children }: { children: ReactNode }) {
   // New words are appended to the list. Importing a file with the same name again replaces that file's words,
   // so you can fix a mistake and upload it again. A word that already exists from another file is not added twice.
   const addWords = useCallback(
-    (source: string, incoming: Word[]) => {
+    (source: string, incoming: Word[], url?: string) => {
       const kept = data.words.filter((w) => w.source !== source);
       const have = new Set(kept.map((w) => w.id));
       const fresh = incoming.filter((w) => !have.has(w.id)).map((w) => ({ ...w, source }));
-      setData((d) => ({ ...d, words: [...d.words.filter((w) => w.source !== source), ...fresh] }));
+      setData((d) => {
+        const urls = { ...d.urls };
+        if (url) urls[source] = url;
+        else delete urls[source];
+        return { ...d, urls, words: [...d.words.filter((w) => w.source !== source), ...fresh] };
+      });
       return { added: fresh.length, skipped: incoming.length - fresh.length, replaced: data.words.length - kept.length };
     },
     [data.words]
   );
-  const removeSource = useCallback((source: string) => setData((d) => ({ ...d, words: d.words.filter((w) => w.source !== source) })), []);
-  const clearWords = useCallback(() => setData((d) => ({ ...d, words: [] })), []);
+  const removeSource = useCallback((source: string) => setData((d) => {
+        const urls = { ...d.urls };
+        delete urls[source];
+        return { ...d, urls, words: d.words.filter((w) => w.source !== source) };
+      }),
+    []
+  );
+  const clearWords = useCallback(() => setData((d) => ({ ...d, words: [], urls: {} })), []);
   const setAccent = useCallback((accent: Accent) => setData((d) => ({ ...d, accent })), []);
   const resetProgress = useCallback(() => setData((d) => ({ ...d, stats: {} })), []);
 
