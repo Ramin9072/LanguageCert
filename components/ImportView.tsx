@@ -201,8 +201,18 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
         throw new Error("The remote file is empty.");
       }
 
-      const blob = new Blob(chunks);
-      const text = await blob.text();
+     const totalBuffer = new Uint8Array(totalSize);
+
+let offset = 0;
+
+for (const chunk of chunks) {
+  totalBuffer.set(chunk, offset);
+  offset += chunk.length;
+}
+
+const text = new TextDecoder("utf-8", {
+  fatal: true,
+}).decode(totalBuffer);
 
       if (text.includes("\uFFFD") || text.includes("\u0000")) {
         throw new Error("The file must use UTF-8 encoding.");
