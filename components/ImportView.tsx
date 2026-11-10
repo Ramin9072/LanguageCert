@@ -537,11 +537,11 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
           خط‌هایی که با <span dir="ltr">#</span> شروع شوند نادیده گرفته
           می‌شوند.
           فایل را حتماً با encoding برابر UTF-8 ذخیره کنید.
-        </Fa>
+        </Fa> 
 
         <pre
           dir="ltr"
-          className="mt-4 overflow-x-auto rounded-xl bg-paper p-4 text-sm leading-7"   
+          className="mt-4 overflow-x-auto rounded-xl bg-paper p-4 text-sm leading-7"
         >
 {`# word | Persian meaning | example sentence
 accomplish | انجام دادن | She worked hard to accomplish her goals.
