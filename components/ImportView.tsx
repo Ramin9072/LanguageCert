@@ -541,7 +541,7 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
 
         <pre
           dir="ltr"
-          className="mt-4 overflow-x-auto rounded-xl bg-paper p-4 text-sm leading-7"
+          className="mt-4 overflow-x-auto rounded-xl bg-paper p-4 text-sm leading-7"   
         >
 {`# word | Persian meaning | example sentence
 accomplish | انجام دادن | She worked hard to accomplish her goals.
