@@ -1,4 +1,3 @@
-
 "use client";
 
 import { DragEvent, useMemo, useRef, useState } from "react";
@@ -12,6 +11,21 @@ import { SAMPLE_TEXT } from "@/lib/sample";
 import type { Tab } from "@/lib/types";
 import { useApp } from "./AppProvider";
 import { Chip, ErrorBox, Fa } from "./ui";
+
+// Converts github.com/user/repo/blob/branch/file.txt
+// to raw.githubusercontent.com/user/repo/branch/file.txt
+function toDirectUrl(u: URL): URL {
+  if (u.hostname === "github.com") {
+    const parts = u.pathname.split("/").filter(Boolean);
+    if (parts.length >= 5 && parts[2] === "blob") {
+      const [user, repo, , branch, ...rest] = parts;
+      return new URL(
+        `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${rest.join("/")}`
+      );
+    }
+  }
+  return u;
+}
 
 export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
   const {
@@ -138,34 +152,33 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
       if (!["http:", "https:"].includes(parsedUrl.protocol)) {
         throw new Error();
       }
-
-      if (!/\.txt$/i.test(parsedUrl.pathname)) {
-        setError("The URL must point to a .txt file.");
-        return;
-      }
     } catch {
       setError("Please enter a valid HTTP or HTTPS URL.");
+      return;
+    }
+
+    parsedUrl = toDirectUrl(parsedUrl);
+
+    if (!/\.txt$/i.test(parsedUrl.pathname)) {
+      setError("The URL must point to a .txt file.");
       return;
     }
 
     setUrlLoading(true);
 
     try {
-      const response = await fetch(parsedUrl.href);
-
-      if (!response.ok) {
-        throw new Error(`Download failed: HTTP ${response.status}`);
-      }
-
-      const contentLength = Number(
-        response.headers.get("content-length")
+      // The download goes through our own server, so CORS does not apply
+      const response = await fetch(
+        `/api/fetch-txt?url=${encodeURIComponent(parsedUrl.href)}`
       );
 
-      if (
-        response.headers.has("content-length") &&
-        contentLength > MAX_FILE_BYTES
-      ) {
-        throw new Error("The remote file exceeds the maximum allowed size.");
+      if (!response.ok) {
+        let msg = `Download failed: HTTP ${response.status}`;
+        try {
+          const j = await response.json();
+          if (j?.error) msg = j.error;
+        } catch {}
+        throw new Error(msg);
       }
 
       if (!response.body) {
@@ -201,32 +214,41 @@ export default function ImportView({ goTo }: { goTo: (t: Tab) => void }) {
         throw new Error("The remote file is empty.");
       }
 
-     const totalBuffer = new Uint8Array(totalSize);
+      const totalBuffer = new Uint8Array(totalSize);
+      let offset = 0;
 
-let offset = 0;
-
-for (const chunk of chunks) {
-  totalBuffer.set(chunk, offset);
-  offset += chunk.length;
-}
-
-const text = new TextDecoder("utf-8", {
-  fatal: true,
-}).decode(totalBuffer);
-
-      if (text.includes("\uFFFD") || text.includes("\u0000")) {
-        throw new Error("The file must use UTF-8 encoding.");
+      for (const chunk of chunks) {
+        totalBuffer.set(chunk, offset);
+        offset += chunk.length;
       }
 
-      const filename = decodeURIComponent(
-        parsedUrl.pathname.split("/").pop() || "imported.txt"
-      );
+      let text: string;
+
+      try {
+        text = new TextDecoder("utf-8", { fatal: true }).decode(totalBuffer);
+      } catch {
+        throw new Error("The file must use UTF-8 encoding");
+      }
+
+      if (text.includes("\uFFFD") || text.includes("\u0000")) {
+        throw new Error("The file must use UTF-8 encoding");
+      }
+
+      let filename = "imported.txt";
+
+      try {
+        filename = decodeURIComponent(
+          parsedUrl.pathname.split("/").pop() || "imported.txt"
+        );
+      } catch {
+        filename = parsedUrl.pathname.split("/").pop() || "imported.txt";
+      }
 
       load(filename, text);
     } catch (err) {
       setError(
         err instanceof Error
-          ? `${err.message}. Check the URL and make sure the server allows cross-origin requests (CORS).`
+          ? `${err.message}. Check that the URL is a public, direct link to a UTF-8 .txt file.`
           : "Could not download the remote file."
       );
     } finally {
@@ -355,7 +377,8 @@ const text = new TextDecoder("utf-8", {
           <h2 className="font-medium">Import from an internet URL</h2>
 
           <p className="mt-1 text-sm text-muted">
-            Paste a direct link to a UTF-8 .txt file.
+            Paste a direct link to a UTF-8 .txt file. GitHub file links are
+            converted automatically.
           </p>
 
           <div className="mt-3 flex flex-col gap-3 sm:flex-row">
@@ -385,10 +408,7 @@ const text = new TextDecoder("utf-8", {
 
         {error && (
           <div className="mt-4">
-            <ErrorBox
-              message={error}
-              onClose={() => setError("")}
-            />
+            <ErrorBox message={error} onClose={() => setError("")} />
           </div>
         )}
       </section>
@@ -419,17 +439,11 @@ const text = new TextDecoder("utf-8", {
               </p>
             </div>
 
-            <button
-              className="btn-primary"
-              onClick={() => goTo("practice")}
-            >
+            <button className="btn-primary" onClick={() => goTo("practice")}>
               Start practice
             </button>
 
-            <button
-              className="btn-secondary"
-              onClick={() => goTo("words")}
-            >
+            <button className="btn-secondary" onClick={() => goTo("words")}>
               View words
             </button>
           </div>
@@ -463,10 +477,7 @@ const text = new TextDecoder("utf-8", {
           </ul>
 
           <div className="mt-3 flex flex-wrap gap-2">
-            <button
-              className="btn-secondary !py-1.5"
-              onClick={downloadAll}
-            >
+            <button className="btn-secondary !py-1.5" onClick={downloadAll}>
               Download all words as .txt
             </button>
 
@@ -486,9 +497,7 @@ const text = new TextDecoder("utf-8", {
             <div className="mt-5 border-t border-line pt-4">
               <div className="mb-2 flex gap-2">
                 {errors.length > 0 && (
-                  <Chip tone="bad">
-                    {errors.length} lines skipped
-                  </Chip>
+                  <Chip tone="bad">{errors.length} lines skipped</Chip>
                 )}
 
                 {warnings.length > 0 && (
@@ -502,13 +511,9 @@ const text = new TextDecoder("utf-8", {
                 {issues.slice(0, 50).map((i, k) => (
                   <li
                     key={k}
-                    className={
-                      i.level === "error" ? "text-bad" : "text-warn"
-                    }
+                    className={i.level === "error" ? "text-bad" : "text-warn"}
                   >
-                    <span className="tabular-nums">
-                      Line {i.line}:
-                    </span>{" "}
+                    <span className="tabular-nums">Line {i.line}:</span>{" "}
                     {i.message}
                   </li>
                 ))}
@@ -528,10 +533,7 @@ const text = new TextDecoder("utf-8", {
         <div className="mb-3 flex items-center">
           <h2 className="mr-auto font-medium">File format</h2>
 
-          <button
-            className="btn-secondary !py-1.5"
-            onClick={downloadSample}
-          >
+          <button className="btn-secondary !py-1.5" onClick={downloadSample}>
             Download sample file
           </button>
         </div>
@@ -539,15 +541,13 @@ const text = new TextDecoder("utf-8", {
         <Fa className="text-[15px] text-ink/80">
           هر کلمه در یک خط جداگانه نوشته می‌شود و بخش‌ها با علامت{" "}
           <span dir="ltr">|</span> از هم جدا می‌شوند: کلمه انگلیسی، معنی
-          فارسی، جمله مثال.
-          جمله مثال اختیاری است، ولی فقط کلمه‌هایی که جمله دارند در تمرین
-          جای‌خالی می‌آیند. جمله باید خود کلمه (یا شکل صرف‌شده‌اش) را
-          داشته باشد.
-          برای پذیرفتن دو املا از <span dir="ltr">/</span> استفاده کنید.
-          خط‌هایی که با <span dir="ltr">#</span> شروع شوند نادیده گرفته
-          می‌شوند.
-          فایل را حتماً با encoding برابر UTF-8 ذخیره کنید.
-        </Fa> 
+          فارسی، جمله مثال. جمله مثال اختیاری است، ولی فقط کلمه‌هایی که جمله
+          دارند در تمرین جای‌خالی می‌آیند. جمله باید خود کلمه (یا شکل
+          صرف‌شده‌اش) را داشته باشد. برای پذیرفتن دو املا از{" "}
+          <span dir="ltr">/</span> استفاده کنید. خط‌هایی که با{" "}
+          <span dir="ltr">#</span> شروع شوند نادیده گرفته می‌شوند. فایل را
+          حتماً با encoding برابر UTF-8 ذخیره کنید.
+        </Fa>
 
         <pre
           dir="ltr"
