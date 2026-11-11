@@ -231,3 +231,62 @@ Stapes | استخوان رکابی گوش | The stapes is very small.
 Middle ear | گوش میانی | The middle ear has three small bones.
 Tympanic membrane | پرده گوش | The tympanic membrane is very thin.
 Auditory ossicles | استخوانچه‌های شنوایی | The auditory ossicles help us hear.
+Pancreas | لوزالمعده | The pancreas is inside the body.
+Urinary bladder | مثانه | The bladder holds urine.
+Pharynx | حلق | Food passes through the pharynx.
+Larynx | حنجره | The larynx helps us speak.
+Heart | قلب | My heart beats every day.
+Arteries | سرخرگ‌ها | Arteries carry blood from the heart.
+Muscles | عضلات | My muscles help me move.
+Liver | کبد، جگر | The liver is an important organ.
+Gallbladder | کیسه صفرا | The gallbladder stores bile.
+Kidney | کلیه | I have two kidneys.
+Skeleton | اسکلت | The skeleton supports the body.
+Intestine | روده | The intestine helps digest food.
+Blood vessel | رگ خونی | Blood flows through blood vessels.
+Capillary | مویرگ | Capillaries are very small blood vessels.
+Navy blue | آبی سرمه‌ای | My shirt is navy blue.
+Indigo | نیلی | The sky is indigo at night.
+Turquoise | فیروزه‌ای | Her dress is turquoise.
+Ocean blue | آبی اقیانوسی | The ocean blue looks beautiful.
+Aquamarine | آبی دریایی روشن | I like aquamarine.
+Sky blue | آبی آسمانی | The sky is sky blue.
+Azure | آبی لاجوردی روشن | The sea is azure.
+Forest green | سبز جنگلی | The forest is forest green.
+Army green | سبز ارتشی | His jacket is army green.
+Olive drab | سبز زیتونی مات | My bag is olive drab.
+Teal | سبزآبی تیره | The wall is teal.
+Sea green | سبز دریایی | Her eyes are sea green.
+
+Hot pink | صورتی پررنگ | Her dress is hot pink.
+Rose pink | صورتی گل‌سرخی | I like rose pink.
+Peach | هلویی | The wall is peach.
+Salmon pink | صورتی سالمونی | Her shirt is salmon pink.
+Purple | بنفش | My favorite color is purple.
+Violet red | قرمز مایل به بنفش | The flower is violet red.
+Lavender | یاسی | My room is lavender.
+Orchid | ارکیده‌ای | Her dress is orchid.
+Wine red | قرمز شرابی | His shirt is wine red.
+Maroon | زرشکی تیره | My shoes are maroon.
+Crimson | قرمز لاکی | The rose is crimson.
+Brick red | قرمز آجری | The wall is brick red.
+Scarlet | قرمز روشن | Her bag is scarlet.
+Coffee brown | قهوه‌ای قهوه‌ای | My shoes are coffee brown.
+Beige | بژ | My coat is beige.
+Sandy brown | قهوه‌ای شنی | The sand is sandy brown.
+Walnut | قهوه‌ای گردویی | The table is walnut.
+Carrot orange | نارنجی هویجی | The carrot is carrot orange.
+Orange | نارنجی | I have an orange bag.
+Gold | طلایی | Her ring is gold.
+Mustard | خردلی | My shirt is mustard.
+Honey | عسلی | Her eyes are honey.
+Yellow | زرد | The sun is yellow.
+Lemon | لیمویی | My dress is lemon.
+Cream | کرم | The walls are cream.
+Black | سیاه | My shoes are black.
+Dark gray | خاکستری تیره | My car is dark gray.
+Gray | خاکستری | The cat is gray.
+Dim gray | خاکستری کم‌رنگ | The wall is dim gray.
+Silver | نقره‌ای | My watch is silver.
+Ivory | عاجی | Her dress is ivory.
+White | سفید | My shirt is white.
