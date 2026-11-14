@@ -290,3 +290,126 @@ Dim gray | خاکستری کم‌رنگ | The wall is dim gray.
 Silver | نقره‌ای | My watch is silver.
 Ivory | عاجی | Her dress is ivory.
 White | سفید | My shirt is white.
+
+Black | سیاه | My bag is black.
+Dark gray | خاکستری تیره | The car is dark gray.
+Gray | خاکستری | My shirt is gray.
+Dim gray | خاکستری کم‌رنگ | The wall is dim gray.
+Silver | نقره‌ای | The spoon is silver.
+Ivory | عاجی | The dress is ivory.
+White | سفید | The cat is white.
+
+Square | مربع | This is a square.
+Rectangle | مستطیل | The door is a rectangle.
+Parallelogram | متوازی‌الأضلاع | This shape is a parallelogram.
+Trapezoid | ذوزنقه | This is a trapezoid.
+Hexagon | شش‌ضلعی | A hexagon has six sides.
+Pentagon | پنج‌ضلعی | A pentagon has five sides.
+Rhombus | لوزی | This shape is a rhombus.
+Heptagon | هفت‌ضلعی | A heptagon has seven sides.
+Octagon | هشت‌ضلعی | An octagon has eight sides.
+Oval | بیضی | The egg is oval.
+Triangle | مثلث | This is a triangle.
+Circle | دایره | The clock is a circle.
+Right triangle | مثلث قائم‌الزاویه | This is a right triangle.
+Sphere | کره | The ball is a sphere.
+Cone | مخروط | The ice cream cone is small.
+Cylinder | استوانه | The can is a cylinder.
+Cube | مکعب | This box is a cube.
+Rectangular prism | مکعب مستطیل | The box is a rectangular prism.
+Pyramid | هرم | The pyramid is big.
+
+Allergy | حساسیت | I have a food allergy.
+Alzheimer's disease | بیماری آلزایمر | Alzheimer's disease affects the brain.
+Appendicitis | آپاندیسیت | Appendicitis can cause stomach pain.
+Arthritis | آرتروز / التهاب مفاصل | Arthritis can cause joint pain.
+Asthma | آسم | He has asthma.
+Arteriosclerosis | تصلب شرایین | Arteriosclerosis affects the arteries.
+Bronchitis | برونشیت | Bronchitis can cause a cough.
+Cancer | سرطان | Cancer is a serious disease.
+Chickenpox | آبله‌مرغان | The child has chickenpox.
+Cold | سرماخوردگی | I have a cold.
+Cough | سرفه | I have a cough.
+Dental abscess | آبسه دندان | A dental abscess can cause pain.
+Depression | افسردگی | Depression can affect your mood.
+Diabetes | دیابت | He has diabetes.
+Diarrhea | اسهال | Diarrhea can cause stomach pain.
+Dizziness | سرگیجه | I feel dizziness.
+Earache | گوش‌درد | I have an earache.
+Epilepsy | صرع | Epilepsy affects the brain.
+Fatty liver | کبد چرب | He has a fatty liver.
+Fever | تب | I have a fever.
+Food poisoning | مسمومیت غذایی | Food poisoning can make you sick.
+Gout | نقرس | Gout can cause joint pain.
+Headache | سردرد | I have a headache.
+Hearing loss | کم‌شنوایی | Hearing loss makes it hard to hear.
+Heart attack | حمله قلبی | A heart attack is an emergency.
+Hepatitis | هپاتیت | Hepatitis affects the liver.
+High blood pressure | فشار خون بالا | He has high blood pressure.
+High cholesterol | کلسترول بالا | High cholesterol can be dangerous.
+HIV | ویروس نقص ایمنی انسانی | HIV affects the immune system.
+Influenza | آنفلوآنزا | Influenza can cause fever.
+
+One | یک | I have one book.
+Two | دو | I have two pens.
+Three | سه | I have three cats.
+Four | چهار | I have four books.
+Five | پنج | I have five fingers.
+Six | شش | I have six pencils.
+Seven | هفت | There are seven days in a week.
+Eight | هشت | I have eight coins.
+None | هیچ‌کدام | I have none.
+Ten | ده | I have ten fingers.
+Eleven | یازده | She is eleven years old.
+Twelve | دوازده | There are twelve months in a year.
+Thirteen | سیزده | He is thirteen years old.
+Fourteen | چهارده | I have fourteen books.
+Fifteen | پانزده | She is fifteen years old.
+Twenty | بیست | I have twenty dollars.
+Thirty | سی | He is thirty years old.
+Forty | چهل | The room has forty chairs.
+Fifty | پنجاه | I have fifty cards.
+Seventy | هفتاد | My grandfather is seventy.
+Eighty | هشتاد | The tree is eighty years old.
+Ninety | نود | The man is ninety years old.
+Hundred | صد | I have one hundred dollars.
+Thousand | هزار | The town has one thousand people.
+Million | میلیون | The city has one million people.
+Billion | میلیارد | The company made one billion dollars.
+Trillion | تریلیون | A trillion is a very large number.
+Fifty-two | پنجاه و دو | I have fifty-two cards.
+One hundred and thirty-six | صد و سی و شش | The number is one hundred and thirty-six.
+Four hundred and forty-nine | چهارصد و چهل و نه | The number is four hundred and forty-nine.
+Three hundred and eighty | سیصد و هشتاد | The number is three hundred and eighty.
+One hundred and fifty | صد و پنجاه | The number is one hundred and fifty.
+Forty-five | چهل و پنج | I have forty-five books.
+Six hundred and fifty-five | ششصد و پنجاه و پنج | The number is six hundred and fifty-five.
+One hundred and twenty-five thousand and three hundred twelve | صد و بیست و پنج هزار و سیصد و دوازده | The number is one hundred and twenty-five thousand and three hundred twelve.
+Six hundred seventy-three thousand and none | ششصد و هفتاد و سه هزار و هیچ | The word "none" means zero or nothing.
+
+The first | اول | I am the first person.
+The second | دوم | She is the second student.
+The third | سوم | He is the third person.
+The fifth | پنجم | This is the fifth book.
+The sixth | ششم | Today is the sixth day.
+The eighth | هشتم | This is the eighth question.
+The twelfth | دوازدهم | Today is the twelfth of May.
+The nineteenth | نوزدهم | This is the nineteenth page.
+The twentieth | بیستم | Today is the twentieth of June.
+The fiftieth | پنجاهم | This is the fiftieth page.
+The sixtieth | شصتم | He is the sixtieth person.
+The hundredth | صدم | This is the hundredth page.
+The thousandth | هزارم | This is the thousandth ticket.
+The hundred thousandth | صد هزارم | This is the hundred thousandth number.
+
+North | شمال | The north is cold.
+East | شرق | The sun rises in the east.
+West | غرب | The sun sets in the west.
+Northeast | شمال شرقی | The wind comes from the northeast.
+Northwest | شمال غربی | They live in the northwest.
+Southeast | جنوب شرقی | The town is in the southeast.
+Southwest | جنوب غربی | The city is in the southwest.
+Northern | شمالی | The northern part is cold.
+Southern | جنوبی | The southern part is warm.
+Eastern | شرقی | I live in the eastern part.
+Western | غربی | The western part is beautiful.
