@@ -413,3 +413,91 @@ Northern | شمالی | The northern part is cold.
 Southern | جنوبی | The southern part is warm.
 Eastern | شرقی | I live in the eastern part.
 Western | غربی | The western part is beautiful.
+
+
+Percent | درصد | Ten percent is enough.
+Centigrade | سانتی‌گراد | The temperature is 20 degrees centigrade.
+Celsius | سلسیوس | Water freezes at zero degrees Celsius.
+Fahrenheit | فارنهایت | It is 70 degrees Fahrenheit today.
+Kelvin | کلوین | The temperature is 300 Kelvin.
+Square meter | متر مربع | My room is 20 square meters.
+Cubic meter | متر مکعب | The box is one cubic meter.
+Millimeter | میلی‌متر | The line is five millimeters long.
+Light year | سال نوری | A light year is a unit of distance.
+Light meter | نورسنج | A light meter measures light.
+Kilogram | کیلوگرم | I bought one kilogram of rice.
+Kilometer | کیلومتر | The school is one kilometer away.
+Gram | گرم | This apple weighs 100 grams.
+Pound | پوند | The bag weighs five pounds.
+Liter | لیتر | I need one liter of water.
+Inch | اینچ | The screen is ten inches wide.
+Foot | فوت | He is six feet tall.
+Mile | مایل | The town is five miles away.
+
+September eleventh, nineteen eighty-five | یازدهم سپتامبر سال ۱۹۸۵ | My birthday is September eleventh, nineteen eighty-five.
+In the morning | صبح | I get up at seven in the morning.
+At noon | ظهر | I should be there at noon.
+In the afternoon | بعدازظهر | Tim has an English class in the afternoon.
+In the evening | عصر، اوایل شب | We usually watch TV in the evening.
+At night | شب | I sometimes work at night.
+At midnight | نیمه‌شب | He can't wake up at midnight.
+
+Fifty-two euros | پنجاه و دو یورو | I have fifty-two euros.
+Four hundred and fifty million euros | چهارصد و پنجاه میلیون یورو | The project costs four hundred and fifty million euros.
+One hundred and thirty-five billion pounds | صد و سی و پنج میلیارد پوند | The company is worth one hundred and thirty-five billion pounds.
+Twenty-five dollars | بیست و پنج دلار | I have twenty-five dollars.
+Three hundred and fifty trillion dollars | سیصد و پنجاه تریلیون دلار | The number is three hundred and fifty trillion dollars.
+Ninety-five point two five million dollars | نود و پنج ممیز بیست و پنج میلیون دلار | The project costs ninety-five point two five million dollars.
+Seventy-five point five billion euros | هفتاد و پنج ممیز پنج میلیارد یورو | The company is worth seventy-five point five billion euros.
+Twenty-five point eight trillion pounds | بیست و پنج ممیز هشت تریلیون پوند | The amount is twenty-five point eight trillion pounds.
+
+Afghanistan | افغانستان | Afghanistan is in Asia.
+Algeria | الجزایر | Algeria is in Africa.
+Argentina | آرژانتین | Argentina is in South America.
+Armenia | ارمنستان | Armenia is a country.
+Australia | استرالیا | Australia is a big country.
+Austria | اتریش | Austria is in Europe.
+Azerbaijan | جمهوری آذربایجان | Azerbaijan is near Iran.
+Bahrain | بحرین | Bahrain is an island country.
+Bangladesh | بنگلادش | Bangladesh is in Asia.
+Belarus | بلاروس | Belarus is in Europe.
+Belgium | بلژیک | Belgium is in Europe.
+Brazil | برزیل | Brazil is a large country.
+Bulgaria | بلغارستان | Bulgaria is in Europe.
+Canada | کانادا | Canada is a large country.
+Chile | شیلی | Chile is in South America.
+China | چین | China is a big country.
+Colombia | کلمبیا | Colombia is in South America.
+Costa Rica | کاستاریکا | Costa Rica is a beautiful country.
+Croatia | کرواسی | Croatia is in Europe.
+Cuba | کوبا | Cuba is an island country.
+Czech Republic | جمهوری چک | The Czech Republic is in Europe.
+Denmark | دانمارک | Denmark is in Europe.
+Ecuador | اکوادور | Ecuador is in South America.
+Egypt | مصر | Egypt is in Africa.
+England | انگلستان | England is part of the United Kingdom.
+Germany | آلمان | Germany is in Europe.
+Ghana | غنا | Ghana is in Africa.
+Greece | یونان | Greece is in Europe.
+Hungary | مجارستان | Hungary is in Europe.
+Iceland | ایسلند | Iceland is a cold country.
+India | هند | India is in Asia.
+Indonesia | اندونزی | Indonesia has many islands.
+Iran | ایران | Iran is in Asia.
+Iraq | عراق | Iraq is near Iran.
+Ireland | ایرلند | Ireland is in Europe.
+Italy | ایتالیا | Italy is in Europe.
+Israel | اسرائیل | Israel is in the Middle East.
+Japan | ژاپن | Japan is an island country.
+Lebanon | لبنان | Lebanon is in the Middle East.
+Malaysia | مالزی | Malaysia is in Asia.
+Mexico | مکزیک | Mexico is in North America.
+Morocco | مراکش | Morocco is in Africa.
+Netherlands | هلند | The Netherlands is in Europe.
+New Zealand | نیوزیلند | New Zealand has beautiful nature.
+Nicaragua | نیکاراگوئه | Nicaragua is in Central America.
+Nigeria | نیجریه | Nigeria is in Africa.
+Norway | نروژ | Norway is a cold country.
+Pakistan | پاکستان | Pakistan is near Iran.
+Panama | پاناما | Panama is in Central America.
+Paraguay | پاراگوئه | Paraguay is in South America.
