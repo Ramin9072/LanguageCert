@@ -501,3 +501,94 @@ Norway | نروژ | Norway is a cold country.
 Pakistan | پاکستان | Pakistan is near Iran.
 Panama | پاناما | Panama is in Central America.
 Paraguay | پاراگوئه | Paraguay is in South America.
+
+
+Analogy | تشبیه، قیاس | The teacher gave an analogy.
+Analyze | تحلیل کردن | We need to analyze the problem.
+Analysis | تحلیل، بررسی | The analysis is easy.
+Analyst | تحلیلگر | She is a financial analyst.
+Analytical | تحلیلی | He has an analytical mind.
+Annual | سالانه | We have an annual meeting.
+Anticipate | پیش‌بینی کردن، انتظار داشتن | I anticipate good results.
+Anticipation | انتظار، پیش‌بینی | She waited in anticipation.
+Apparent | آشکار، واضح | The problem is apparent.
+Append | اضافه کردن، پیوست کردن | Please append your name.
+Appendix | پیوست، ضمیمه | Read the appendix.
+Appreciable | قابل توجه، محسوس | There is an appreciable difference.
+Appreciate | قدردانی کردن، ارزش قائل شدن | I appreciate your help.
+Appreciation | قدردانی، سپاسگزاری | I showed my appreciation.
+Approach | رویکرد، روش؛ نزدیک شدن | We need a new approach.
+Appropriate | مناسب، شایسته | This is an appropriate answer.
+Approximate | تقریبی؛ تقریب زدن | The approximate cost is fifty dollars.
+Approximation | تخمین، تقریب | This is only an approximation.
+Arbitrary | دلخواه، خودسرانه | The decision was arbitrary.
+Area | منطقه، ناحیه؛ مساحت | This is a quiet area.
+Aspect | جنبه، بُعد | This is an important aspect.
+Assemble | جمع کردن، مونتاژ کردن | We assemble the furniture.
+Assembly | گردهمایی، مونتاژ | The assembly starts at nine.
+Assess | ارزیابی کردن | We need to assess the situation.
+Assign | اختصاص دادن، واگذار کردن | The teacher will assign homework.
+Assignment | تکلیف، وظیفه | I finished my assignment.
+Assist | کمک کردن | Can you assist me?
+Assistance | کمک، یاری | Thank you for your assistance.
+Assume | فرض کردن | I assume he is at home.
+Assuming | با فرض اینکه | Assuming it does not rain, we will go.
+Assumption | فرض، پیش‌فرض | That is a wrong assumption.
+Assurance | اطمینان، تضمین | She gave me her assurance.
+Attach | پیوست کردن، وصل کردن | Please attach the file.
+Attachment | پیوست، ضمیمه | I sent an email attachment.
+Attain | به دست آوردن، دست یافتن | She wants to attain her goal.
+Attainment | دستیابی، کسب موفقیت | Education is important for personal attainment.
+Attitude | نگرش، طرز فکر | He has a positive attitude.
+Author | نویسنده | My favorite author is famous.
+Authoritative | معتبر، موثق؛ مقتدرانه | This is an authoritative source.
+Authority | مقام مسئول، مرجع؛ اختیار | The local authority made a decision.
+Authorship | نویسندگی، تألیف | The book's authorship is unknown.
+Automate | خودکار کردن | We can automate this process.
+Automated | خودکارشده | This is an automated system.
+Automatic | خودکار، اتوماتیک | The door is automatic.
+Automation | خودکارسازی، اتوماسیون | Automation saves time.
+Aware | آگاه، مطلع | I am aware of the problem.
+Awareness | آگاهی | Education increases awareness.
+Behalf | نمایندگی، جانب | I am speaking on your behalf.
+Beneficial | مفید، سودمند | Exercise is beneficial.
+Benefit | فایده، مزیت؛ سود بردن | This medicine has many benefits.
+Bias | تعصب، سوگیری | We should avoid bias.
+Biased | جانبدارانه، دارای تعصب | His opinion is biased.
+Bond | پیوند، رابطه؛ اوراق قرضه | They have a strong bond.
+Brevity | کوتاهی، مختصر بودن | Brevity is important in writing.
+Brief | مختصر، کوتاه | Please give me a brief answer.
+Briefing | جلسه توجیهی، توضیحات مختصر | We have a briefing today.
+Briefly | به‌طور خلاصه | She explained it briefly.
+Bulk | حجم زیاد، بخش عمده | I bought food in bulk.
+Bulky | حجیم، بزرگ و جاگیر | This box is bulky.
+Capability | توانایی، قابلیت | The phone has many capabilities.
+Capable | توانا، قادر | She is capable of doing it.
+Capacity | ظرفیت، گنجایش؛ توانایی | The room has a large capacity.
+Category | دسته، طبقه | Choose a category.
+Cease | متوقف شدن، پایان دادن | The noise must cease.
+Challenge | چالش، به چالش کشیدن | This job is a challenge.
+Channel | کانال، مسیر | I watch this TV channel.
+Chapter | فصل | Read the first chapter.
+Chart | نمودار، جدول | Look at the chart.
+Chemical | ماده شیمیایی؛ شیمیایی | Water is a chemical substance.
+Circumstance | شرایط، اوضاع | We cannot change the circumstance.
+Citation | ارجاع، استناد | The book has many citations.
+Cite | ارجاع دادن، استناد کردن | Please cite your source.
+Civil | مدنی، شهروندی | They discussed civil rights.
+Clarification | توضیح بیشتر، شفاف‌سازی | I need clarification.
+Clarify | روشن کردن، توضیح دادن | Please clarify your answer.
+Clarity | وضوح، روشنی | Your writing needs clarity.
+Classic | کلاسیک، ماندگار | This is a classic movie.
+Classical | مربوط به آثار کلاسیک | I enjoy classical music.
+Clause | بند، عبارت وابسته در دستور زبان | Read the first clause.
+Code | کد، رمز | Enter the code.
+Coded | کدگذاری‌شده | The message is coded.
+Coding | کدنویسی | Coding is interesting.
+Coherence | انسجام، پیوستگی | Your essay needs coherence.
+Coherent | منسجم، قابل فهم | Your explanation is coherent.
+Coincide | هم‌زمان بودن، مطابقت داشتن | Our holidays coincide.
+Collapse | فرو ریختن، از هم پاشیدن | The old building may collapse.
+Colleague | همکار | My colleague is very helpful.
+Commence | آغاز کردن، شروع شدن | The meeting will commence soon.
+Commencement | آغاز، شروع | The commencement of the meeting is at nine.
