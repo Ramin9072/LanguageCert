@@ -592,3 +592,75 @@ Collapse | فرو ریختن، از هم پاشیدن | The old building may col
 Colleague | همکار | My colleague is very helpful.
 Commence | آغاز کردن، شروع شدن | The meeting will commence soon.
 Commencement | آغاز، شروع | The commencement of the meeting is at nine.
+
+Comment | نظر، اظهار نظر؛ نظر دادن | Please write a comment.
+Commentary | تفسیر، شرح، توضیحات | I read the commentary.
+Commentator | مفسر، گزارشگر | The commentator spoke clearly.
+Commission | کمیسیون؛ مأموریت دادن | The commission made a decision.
+Commit | متعهد شدن؛ مرتکب شدن | Do not commit a crime.
+Commitment | تعهد، پایبندی | He made a commitment.
+Committed | متعهد، پایبند | She is committed to her work.
+Commodity | کالا، محصول تجاری | Oil is an important commodity.
+Communicate | ارتباط برقرار کردن، منتقل کردن | We communicate every day.
+Communication | ارتباط، ارتباطات | Good communication is important.
+Communicative | اهل ارتباط، دارای مهارت ارتباطی | She is very communicative.
+Community | جامعه، اجتماع | Our community is friendly.
+Capability | توانایی، قابلیت | This phone has many capabilities.
+Compatible | سازگار، هماهنگ | This software is compatible with my computer.
+Compensate | جبران کردن، غرامت دادن | The company will compensate him.
+Compensation | جبران، غرامت، دستمزد | He received compensation.
+Compensatory | جبرانی | She received compensatory payment.
+Complex | پیچیده، مرکب | This problem is complex.
+Complexity | پیچیدگی | I understand the complexity of the problem.
+Component | جزء، مؤلفه | This is an important component.
+Compound | ترکیب؛ ترکیب کردن | Water is a chemical compound.
+Comprehensive | جامع، فراگیر | This is a comprehensive report.
+Comprise | شامل بودن، تشکیل شدن از | The team comprises ten people.
+Computation | محاسبه | The computation is simple.
+Compute | محاسبه کردن | We compute the total cost.
+Computer | رایانه، کامپیوتر | I use a computer every day.
+Computing | محاسبات رایانه‌ای، رایانش | Computing is an interesting subject.
+Conceivable | قابل تصور | It is a conceivable idea.
+Conceive | تصور کردن، درک کردن | I cannot conceive the idea.
+Concentrate | تمرکز کردن | Please concentrate on your work.
+Concentration | تمرکز | I need more concentration.
+Concept | مفهوم، ایده | This is a simple concept.
+Conception | برداشت، تصور؛ شکل‌گیری | My conception of success is different.
+Conceptual | مفهومی، نظری | This is a conceptual model.
+Conclude | نتیجه‌گیری کردن، به پایان رساندن | We can conclude the meeting.
+Concluding | پایانی، نتیجه‌گیرانه | This is the concluding paragraph.
+Conclusion | نتیجه‌گیری، پایان | I agree with your conclusion.
+Conclusive | قطعی، قاطع | We need conclusive evidence.
+Concurrent | هم‌زمان | The two events were concurrent.
+Conduct | انجام دادن؛ رفتار | They conduct research.
+Confer | مشورت کردن؛ اعطا کردن | The teachers will confer today.
+Conference | کنفرانس، همایش | I attended a conference.
+Confine | محدود کردن، محصور کردن | Do not confine yourself to one idea.
+Confined | محدود، محصور | The animal was confined in a small space.
+Confirm | تأیید کردن | Please confirm your answer.
+Confirmation | تأیید، تصدیق | I received a confirmation email.
+Conflict | تعارض، اختلاف، درگیری | They have a conflict.
+Conform | مطابقت داشتن، پیروی کردن | You must conform to the rules.
+Conformation | شکل، ساختار؛ آرایش فضایی | The protein has a complex conformation.
+Conformist | همرنگ جماعت، پیرو عرف | He is not a conformist.
+Conformity | همنوایی، انطباق | Conformity is important in some groups.
+Consensus | توافق عمومی، اجماع | We reached a consensus.
+Consent | رضایت، موافقت | You need parental consent.
+Consequence | پیامد، نتیجه | Every action has a consequence.
+Consist | تشکیل شدن از | The team consists of five people.
+Consistency | ثبات، سازگاری، یکنواختی | Consistency is important.
+Constant | ثابت، دائمی | The temperature is constant.
+Constantly | دائماً، پیوسته | He is constantly busy.
+Constituency | حوزه انتخاباتی؛ گروه رأی‌دهندگان | She represents this constituency.
+Constitute | تشکیل دادن، محسوب شدن | These parts constitute a whole.
+Consume | مصرف کردن | We consume food every day.
+Consumer | مصرف‌کننده | The consumer bought a new phone.
+Consumption | مصرف | Water consumption is important.
+Contact | تماس؛ تماس گرفتن | Please contact me tomorrow.
+Contemporary | معاصر، امروزی | I like contemporary art.
+Context | زمینه، بافت، شرایط | Read the word in context.
+Contraction | انقباض؛ شکل کوتاه‌شده | "Don't" is a contraction.
+Contradictory | متناقض، ناسازگار | These statements are contradictory.
+Contrary | مخالف، برعکس | Contrary to expectations, he won.
+Contrast | تضاد، تفاوت؛ مقایسه کردن | There is a strong contrast between them.
+Contrasting | متضاد، متفاوت | The two colors are contrasting.
