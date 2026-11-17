@@ -763,3 +763,87 @@ Wharton School | مدرسه وارتون | The Wharton School is part of the Uni
 
 American Museum of Natural History | موزه تاریخ طبیعی آمریکا | The American Museum of Natural History is in New York.
 Arc de Triomphe | طاق پیروزی | The Arc de Triomphe is in Paris.
+
+Contribute | مشارکت کردن، کمک کردن | I want to contribute to this project.
+Contribution | مشارکت، کمک، سهم | Thank you for your contribution.
+Contributor | مشارکت‌کننده، همکار | He is a regular contributor.
+Controversial | بحث‌برانگیز، جنجالی | This is a controversial topic.
+Controversy | جنجال، اختلاف‌نظر | The decision caused controversy.
+Convene | تشکیل جلسه دادن، گرد هم آوردن | They will convene a meeting.
+Convention | همایش، گردهمایی؛ قرارداد و عرف | I attended a business convention.
+Conventional | مرسوم، سنتی، متعارف | This is a conventional method.
+Converse | گفت‌وگو کردن؛ معکوس | We often converse after class.
+Conversely | برعکس، از سوی دیگر | He is tall. Conversely, his brother is short.
+Conversion | تبدیل، تغییر | The conversion took two hours.
+Convert | تبدیل کردن، تغییر دادن | I want to convert this file.
+Convertible | قابل تبدیل | This sofa is convertible.
+Convince | متقاعد کردن | I can convince him.
+Convinced | متقاعدشده، قانع‌شده | I am convinced.
+Convincing | قانع‌کننده | She gave a convincing answer.
+Cooperate | همکاری کردن | We must cooperate.
+Cooperation | همکاری | Thank you for your cooperation.
+Cooperative | اهل همکاری، مشارکتی | He is very cooperative.
+Coordinate | هماهنگ کردن | We need to coordinate our plans.
+Coordination | هماهنگی | Good coordination is important.
+Coordinator | هماهنگ‌کننده | She is the project coordinator.
+Core | هسته، بخش اصلی | Trust is the core of friendship.
+Corporate | شرکتی، مربوط به شرکت | He works in the corporate world.
+Corporation | شرکت بزرگ، مؤسسه تجاری | The corporation has many employees.
+Correspond | مطابقت داشتن؛ مکاتبه کردن | Your answer does not correspond to mine.
+Correspondence | مکاتبه، نامه‌نگاری | I received your correspondence.
+Corresponding | متناظر، مربوط | Please check the corresponding page.
+Couple | زوج؛ دو عدد | I bought a couple of books.
+Create | خلق کردن، ایجاد کردن | I want to create something new.
+Creation | آفرینش، ایجاد | The creation took a long time.
+Creative | خلاق | She is a creative person.
+Creativity | خلاقیت | Creativity is important.
+Creator | خالق، آفریننده | He is the creator of this website.
+Credit | اعتبار؛ امتیاز؛ اعتبار دادن | She deserves credit for her work.
+Creditor | طلبکار | The creditor wants the money back.
+Criterion | معیار، ملاک | Price is an important criterion.
+Crucial | بسیار مهم، حیاتی | Time is crucial.
+Cultural | فرهنگی | We visited a cultural center.
+Culturally | از نظر فرهنگی | The two countries are culturally different.
+Culture | فرهنگ | I like learning about other cultures.
+Currency | واحد پول، ارز | The currency of Japan is the yen.
+Cycle | چرخه، دوره؛ دوچرخه‌سواری | The life cycle is interesting.
+Cyclic | چرخه‌ای، دوره‌ای | This is a cyclic process.
+Data | داده‌ها، اطلاعات | We need more data.
+Debatable | قابل بحث، بحث‌برانگیز | This point is debatable.
+Debate | مناظره، بحث | We had a debate in class.
+Decade | دهه، دوره ده‌ساله | He lived there for a decade.
+Decline | کاهش یافتن؛ رد کردن | Sales began to decline.
+Deduce | استنباط کردن، نتیجه‌گیری کردن | I can deduce the answer.
+Deduction | استنتاج، نتیجه‌گیری | This deduction is correct.
+Define | تعریف کردن | Please define this word.
+Definite | مشخص، قطعی | I need a definite answer.
+Definitely | قطعاً، حتماً | I will definitely come.
+Definition | تعریف، معنی | Read the definition carefully.
+Demonstrable | قابل اثبات، قابل نشان دادن | The results are demonstrable.
+Demonstrate | نشان دادن، اثبات کردن | Let me demonstrate this method.
+Demonstration | نمایش، اثبات، ارائه عملی | The teacher gave a demonstration.
+Demonstrative | نمایشی؛ اشاره‌ای | This is a demonstrative pronoun.
+Demonstrator | نمایش‌دهنده، ارائه‌دهنده عملی | The demonstrator showed us how it works.
+Denial | انکار، رد کردن | His denial surprised me.
+Denote | نشان دادن، دلالت کردن | This sign denotes danger.
+Deny | انکار کردن، رد کردن | He did not deny the truth.
+Depress | افسرده کردن، دلسرد کردن | Bad news can depress people.
+Depression | افسردگی؛ رکود | Depression can affect daily life.
+Derive | به دست آوردن، مشتق شدن | Many words derive from Latin.
+Design | طراحی؛ طرح | I like your design.
+Designer | طراح | She is a fashion designer.
+Despite | با وجود، علی‌رغم | Despite the rain, we went out.
+Detect | تشخیص دادن، کشف کردن | The machine can detect smoke.
+Detection | تشخیص، کشف | Early detection is important.
+Detective | کارآگاه | The detective found the answer.
+Detector | آشکارساز، دستگاه تشخیص | The smoke detector is working.
+Deviate | منحرف شدن، از مسیر خارج شدن | Do not deviate from the plan.
+Device | دستگاه، وسیله | This device is very useful.
+Devote | اختصاص دادن، وقف کردن | I devote time to learning English.
+Devoted | فداکار، متعهد، وقف‌شده | She is devoted to her family.
+Differentiate | تفاوت قائل شدن، متمایز کردن | Can you differentiate these words?
+Dimension | بُعد، اندازه | We need to measure the dimensions.
+Diminish | کاهش یافتن، کم کردن | The pain will diminish.
+Diminution | کاهش، کم‌شدن | There was a diminution in sales.
+Discrete | مجزا، جداگانه | The problem has three discrete parts.
+Discretion | صلاحدید، اختیار؛ رازداری | You can use your discretion.
