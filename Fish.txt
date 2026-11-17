@@ -664,3 +664,102 @@ Contradictory | متناقض، ناسازگار | These statements are contradic
 Contrary | مخالف، برعکس | Contrary to expectations, he won.
 Contrast | تضاد، تفاوت؛ مقایسه کردن | There is a strong contrast between them.
 Contrasting | متضاد، متفاوت | The two colors are contrasting.
+Ohio | اوهایو | Ohio is a state in the USA.
+Oklahoma | اکلاهما | Oklahoma is in the USA.
+Oregon | اورگن | Oregon is in the USA.
+Pennsylvania | پنسیلوانیا | Pennsylvania is in the USA.
+Rhode Island | رود آیلند | Rhode Island is a small state.
+South Dakota | داکوتای جنوبی | South Dakota is in the USA.
+Tennessee | تنسی | Tennessee is in the USA.
+Texas | تگزاس | Texas is a large state.
+Utah | یوتا | Utah is in the USA.
+Vermont | ورمانت | Vermont is a small state.
+Virginia | ویرجینیا | Virginia is in the USA.
+Washington | واشینگتن | Washington is in the USA.
+West Virginia | ویرجینیای غربی | West Virginia is in the USA.
+Wisconsin | ویسکانسین | Wisconsin is in the USA.
+Wyoming | وایومینگ | Wyoming is in the USA.
+
+Baton Rouge | باتون روژ | Baton Rouge is the capital of Louisiana.
+Boston | بوستون | Boston is a city in Massachusetts.
+Augusta | آگوستا | Augusta is the capital of Maine.
+Annapolis | آناپولیس | Annapolis is the capital of Maryland.
+Lansing | لنسینگ | Lansing is the capital of Michigan.
+Saint Paul | سنت پل | Saint Paul is the capital of Minnesota.
+Jackson | جکسون | Jackson is the capital of Mississippi.
+Jefferson City | جفرسون سیتی | Jefferson City is the capital of Missouri.
+Helena | هلنا | Helena is the capital of Montana.
+Lincoln | لینکلن | Lincoln is the capital of Nebraska.
+Carson City | کارسون سیتی | Carson City is the capital of Nevada.
+Concord | کنکورد | Concord is the capital of New Hampshire.
+Trenton | ترنتون | Trenton is the capital of New Jersey.
+Santa Fe | سانتافه | Santa Fe is the capital of New Mexico.
+Albany | آلبانی | Albany is the capital of New York.
+Raleigh | رالی | Raleigh is the capital of North Carolina.
+Bismarck | بیسمارک | Bismarck is the capital of North Dakota.
+Columbus | کلمبوس | Columbus is the capital of Ohio.
+Pierre | پیر | Pierre is the capital of South Dakota.
+Nashville | نشویل | Nashville is the capital of Tennessee.
+Austin | آستین | Austin is the capital of Texas.
+Salt Lake City | سالت لیک سیتی | Salt Lake City is the capital of Utah.
+Montpelier | مانتپلیِر | Montpelier is the capital of Vermont.
+Richmond | ریچموند | Richmond is the capital of Virginia.
+Olympia | المپیا | Olympia is the capital of Washington.
+Charleston | چارلستون | Charleston is the capital of West Virginia.
+Cheyenne | شاین | Cheyenne is the capital of Wyoming.
+Dallas | دالاس | Dallas is a city in Texas.
+Las Vegas | لاس وگاس | Las Vegas is a city in Nevada.
+Los Angeles | لس‌آنجلس | Los Angeles is in California.
+San Diego | سن دیگو | San Diego is in California.
+San Francisco | سان‌فرانسیسکو | San Francisco is a beautiful city.
+
+Alberta | آلبرتا | Alberta is a province in Canada.
+British | بریتانیایی | British people speak English.
+British Columbia | بریتیش کلمبیا | British Columbia is a province in Canada.
+Manitoba | منیتوبا | Manitoba is a province in Canada.
+New Brunswick | نیوبرانزویک | New Brunswick is a province in Canada.
+Newfoundland and Labrador | نیوفاندلند و لابرادور | Newfoundland and Labrador is in Canada.
+Nova Scotia | نوا اسکوشیا | Nova Scotia is a province in Canada.
+Ontario | انتاریو | Ontario is a province in Canada.
+Prince Edward Island | جزیره پرنس ادوارد | Prince Edward Island is a province in Canada.
+Quebec | کبک | Quebec is a province in Canada.
+Saskatchewan | ساسکاچوان | Saskatchewan is a province in Canada.
+Northwest Territories | قلمروهای شمال غربی | The Northwest Territories are in Canada.
+Yukon | یوکان | Yukon is a territory in Canada.
+
+Edmonton | ادمونتون | Edmonton is the capital of Alberta.
+Victoria | ویکتوریا | Victoria is the capital of British Columbia.
+Winnipeg | وینیپگ | Winnipeg is the capital of Manitoba.
+Fredericton | فردریکتون | Fredericton is the capital of New Brunswick.
+St. John's | سنت جانز | St. John's is the capital of Newfoundland and Labrador.
+Halifax | هلیفکس | Halifax is the capital of Nova Scotia.
+Toronto | تورنتو | Toronto is the capital of Ontario.
+Charlottetown | شارلوت‌تاون | Charlottetown is the capital of Prince Edward Island.
+Quebec City | شهر کبک | Quebec City is the capital of Quebec.
+Regina | رجاینا | Regina is the capital of Saskatchewan.
+Calgary | کلگری | Calgary is a city in Alberta.
+Montreal | مونترال | Montreal is a city in Quebec.
+Ottawa | اتاوا | Ottawa is the capital of Canada.
+Vancouver | ونکوور | Vancouver is a city in British Columbia.
+
+Belmont High School | دبیرستان بلمونت | Belmont High School is a school.
+Bond University | دانشگاه باند | Bond University is in Australia.
+University at Buffalo | دانشگاه بوفالو | The University at Buffalo is in New York.
+University of Chicago | دانشگاه شیکاگو | The University of Chicago is in Illinois.
+Harvard University | دانشگاه هاروارد | Harvard University is in the USA.
+King's College | کینگز کالج | King's College is in London.
+MIT | مؤسسه فناوری ماساچوست | MIT is a famous university.
+MLA | انجمن زبان مدرن | MLA publishes books and academic guides.
+Oxford University | دانشگاه آکسفورد | Oxford University is in England.
+Princeton University | دانشگاه پرینستون | Princeton University is in New Jersey.
+Stanford University | دانشگاه استنفورد | Stanford University is in California.
+Summerhill School | مدرسه سامرهیل | Summerhill School is in England.
+University of Berlin | دانشگاه برلین | The University of Berlin is in Germany.
+University of Cambridge | دانشگاه کمبریج | The University of Cambridge is in England.
+University of North Carolina | دانشگاه کارولینای شمالی | The University of North Carolina is in the USA.
+University of Queensland | دانشگاه کوئینزلند | The University of Queensland is in Australia.
+University of Sussex | دانشگاه ساسکس | The University of Sussex is in England.
+Wharton School | مدرسه وارتون | The Wharton School is part of the University of Pennsylvania.
+
+American Museum of Natural History | موزه تاریخ طبیعی آمریکا | The American Museum of Natural History is in New York.
+Arc de Triomphe | طاق پیروزی | The Arc de Triomphe is in Paris.
