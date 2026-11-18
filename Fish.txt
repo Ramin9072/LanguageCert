@@ -847,3 +847,160 @@ Diminish | کاهش یافتن، کم کردن | The pain will diminish.
 Diminution | کاهش، کم‌شدن | There was a diminution in sales.
 Discrete | مجزا، جداگانه | The problem has three discrete parts.
 Discretion | صلاحدید، اختیار؛ رازداری | You can use your discretion.
+Discrimination | تبعیض؛ تشخیص | Discrimination is unfair.
+Displace | جابه‌جا کردن؛ آواره کردن | The war displaced many people.
+Displacement | جابه‌جایی؛ آوارگی | The displacement was difficult.
+Display | نمایش دادن؛ نمایش | The store displays new clothes.
+Disposable | یک‌بارمصرف | I use disposable cups.
+Disposal | دفع؛ دور انداختن | Proper waste disposal is important.
+Dispose | دور انداختن؛ خلاص شدن از | Please dispose of the trash.
+Disproportion | عدم تناسب؛ ناهماهنگی | There is a disproportion between the two sides.
+Dissimilar | متفاوت؛ غیرمشابه | The two pictures are dissimilar.
+Distinct | متمایز؛ مشخص | The two sounds are distinct.
+Distinction | تفاوت؛ تمایز | There is a clear distinction.
+Distinctive | خاص؛ متمایز | She has a distinctive voice.
+Distinctly | به‌وضوح؛ به‌طور مشخص | I distinctly remember his face.
+Distort | تحریف کردن؛ تغییر شکل دادن | Do not distort the truth.
+Distribute | توزیع کردن؛ پخش کردن | They distribute food to families.
+Distribution | توزیع؛ پخش | The distribution starts today.
+Distributive | توزیعی | We studied distributive property in math.
+Diverse | متنوع | The city has a diverse population.
+Diversify | متنوع کردن | The company wants to diversify its products.
+Document | سند؛ مدرک؛ مستند کردن | Please read this document.
+Documentation | مستندات؛ مدارک | I need the documentation.
+Domain | حوزه؛ قلمرو؛ دامنه | Education is an important domain.
+Domestic | داخلی؛ خانگی | This is a domestic product.
+Domesticate | اهلی کردن | People domesticate some animals.
+Domesticated | اهلی‌شده | Dogs are domesticated animals.
+Dominance | سلطه؛ برتری | The team showed its dominance.
+Dominant | مسلط؛ غالب | Blue is the dominant color.
+Draft | پیش‌نویس؛ پیش‌نویس نوشتن | I wrote a first draft.
+Drama | نمایش؛ درام؛ ماجرا | I enjoy watching drama.
+Dramatic | چشمگیر؛ نمایشی؛ دراماتیک | There was a dramatic change.
+Dramatist | نمایشنامه‌نویس | The dramatist wrote a new play.
+Dramatize | نمایشی کردن؛ به شکل درام درآوردن | They dramatize the story.
+Duration | مدت؛ طول مدت | The meeting has a short duration.
+Dynamic | پویا؛ پرتحرک | She is a dynamic person.
+Economic | اقتصادی | The country faces economic problems.
+Economical | مقرون‌به‌صرفه؛ صرفه‌جویانه | This car is economical.
+Economically | از نظر اقتصادی | The country is economically strong.
+Economist | اقتصاددان | My brother is an economist.
+Economics | علم اقتصاد | I study economics.
+Economy | اقتصاد؛ صرفه‌جویی | The economy is growing.
+Edit | ویرایش کردن | I need to edit this file.
+Edition | نسخه؛ چاپ | I bought the new edition.
+Editor | ویراستار؛ سردبیر | The editor checked my article.
+Editorial | سرمقاله؛ مربوط به ویراستاری | I read an editorial today.
+Element | عنصر؛ جزء | Water is an important element of life.
+Eliminate | حذف کردن؛ از بین بردن | We must eliminate this problem.
+Elimination | حذف؛ از بین بردن | The elimination of waste is important.
+Emerge | ظاهر شدن؛ پدیدار شدن | The sun began to emerge.
+Emergence | ظهور؛ پدیدار شدن | The emergence of new ideas is important.
+Emergent | نوظهور؛ در حال پدید آمدن | This is an emergent problem.
+Emerging | نوظهور؛ در حال ظهور | She works in an emerging industry.
+Emphasis | تأکید | The teacher put emphasis on grammar.
+Emphasize | تأکید کردن | I want to emphasize this point.
+Emphatic | قاطع؛ مؤکد | She gave an emphatic answer.
+Empirical | تجربی؛ مبتنی بر مشاهده | We need empirical evidence.
+Empiricism | تجربه‌گرایی | Empiricism emphasizes experience.
+Enable | قادر ساختن؛ امکان دادن | This app enables me to learn.
+Enabling | توانمندساز؛ فراهم‌کننده امکان | Technology is enabling faster communication.
+Encounter | مواجه شدن با؛ برخورد | I encountered an old friend.
+Energetic | پرانرژی | The children are energetic.
+Energy | انرژی | I need more energy.
+Enforce | اجرا کردن؛ اعمال کردن | The police enforce the law.
+Enforced | اجراشده؛ اعمال‌شده | The rule is strictly enforced.
+Enforcement | اجرا؛ اعمال قانون | Law enforcement is important.
+Enhance | بهبود دادن؛ افزایش دادن | Exercise can enhance your health.
+Enhanced | بهبودیافته؛ تقویت‌شده | The new version has enhanced features.
+Enormity | عظمت؛ بزرگی بسیار زیاد | We were surprised by the enormity of the task.
+Enormous | بسیار بزرگ؛ عظیم | They live in an enormous house.
+Enormously | به‌شدت؛ به میزان بسیار زیاد | The price increased enormously.
+Ensure | مطمئن شدن؛ تضمین کردن | Please ensure that the door is locked.
+Entity | موجودیت؛ نهاد | The company is a separate legal entity.
+Environment | محیط؛ محیط زیست | We must protect the environment.
+Environmental | زیست‌محیطی | Environmental problems affect everyone.
+Equate | برابر دانستن | Do not equate money with happiness.
+Equation | معادله | I solved the equation.
+Equip | مجهز کردن | They equip the room with computers.
+Equipment | تجهیزات | We need new equipment.
+Equivalent | معادل؛ هم‌ارز | One dollar is not equivalent to one euro.
+Erode | فرسایش دادن؛ فرسوده شدن | Water can erode rocks.
+Erosion | فرسایش | Soil erosion is a serious problem.
+Error | خطا؛ اشتباه | I made an error.
+Establish | تأسیس کردن؛ برقرار کردن | They established a new school.
+Establishment | تأسیس؛ مؤسسه | The establishment of the school took time.
+Estate | ملک؛ دارایی؛ املاک | They bought a large estate.
+Estimate | تخمین زدن؛ برآورد | Can you estimate the cost?
+Estimation | تخمین؛ برآورد | The estimation was accurate.
+Ethic | اصل اخلاقی؛ معیار اخلاقی | Honesty is an important ethic.
+Ethical | اخلاقی | This is an ethical decision.
+Evaluate | ارزیابی کردن | The teacher will evaluate our work.
+Evaluation | ارزیابی | The evaluation was fair.
+Eventual | نهایی؛ در نهایت رخ‌دهنده | The eventual result was good.
+Eventually | سرانجام؛ در نهایت | Eventually, we found the answer.
+Evidence | مدرک؛ شواهد | I have evidence.
+Evident | آشکار؛ واضح | Her happiness was evident.
+Evidential | مربوط به شواهد؛ مبتنی بر مدرک | The report contains evidential support.
+Evolve | تکامل یافتن؛ تحول پیدا کردن | People and societies evolve.
+Exceed | فراتر رفتن؛ بیشتر بودن | Do not exceed the speed limit.
+Exclude | مستثنا کردن؛ حذف کردن | They exclude him from the team.
+Excluding | به‌جز؛ به‌استثنای | Everyone came, excluding John.
+Exclusion | محروم‌سازی؛ حذف | His exclusion was unfair.
+Exclusive | انحصاری؛ ویژه | This is an exclusive offer.
+Exclusively | منحصراً؛ فقط | This room is exclusively for staff.
+Exhibit | نمایش دادن؛ نمایشگاه | The museum exhibits old paintings.
+Exhibition | نمایشگاه | We visited an art exhibition.
+Expand | گسترش دادن؛ بزرگ‌تر شدن | The company plans to expand.
+Expansion | گسترش؛ توسعه | The city needs expansion.
+Expansive | گسترده؛ وسیع | They have an expansive garden.
+Expert | متخصص؛ ماهر | She is an expert in science.
+Expertise | تخصص؛ مهارت حرفه‌ای | He has expertise in computers.
+Explicit | صریح؛ روشن | The instructions are explicit.
+Exploit | بهره‌برداری کردن؛ سوءاستفاده کردن | Some companies exploit workers.
+Exploitation | بهره‌کشی؛ سوءاستفاده | The law protects workers from exploitation.
+Export | صادر کردن؛ صادرات | This country exports oil.
+Exporter | صادرکننده | The exporter sells fruit abroad.
+Expose | آشکار کردن؛ در معرض قرار دادن | The report may expose the truth.
+Exposed | آشکارشده؛ در معرض | The wires are exposed.
+Exposure | قرار گرفتن در معرض؛ مواجهه | Exposure to sunlight can be helpful.
+External | خارجی؛ بیرونی | The building has external damage.
+Externalize | بیرونی کردن؛ آشکار کردن | He finds it hard to externalize his feelings.
+Extract | استخراج کردن؛ عصاره | They extract oil from plants.
+Extraction | استخراج | Oil extraction can be expensive.
+Facilitate | آسان کردن؛ تسهیل کردن | This tool facilitates learning.
+Facilitator | تسهیل‌گر | The facilitator started the meeting.
+Facility | امکانات؛ تأسیسات | The school has a sports facility.
+Factor | عامل؛ فاکتور | Price is an important factor.
+Feature | ویژگی؛ قابلیت | This phone has a useful feature.
+Federal | فدرال؛ مربوط به دولت مرکزی | The federal government made a decision.
+Federation | فدراسیون؛ اتحاد | The federation has many members.
+Fee | هزینه؛ حق‌الزحمه | I paid the school fee.
+File | پرونده؛ فایل؛ بایگانی کردن | Please open this file.
+Filing | بایگانی؛ ثبت مدارک | The filing process takes time.
+Final | نهایی؛ آخرین | This is my final answer.
+Finality | قطعیت؛ نهایی بودن | The decision has a sense of finality.
+Finalize | نهایی کردن | We need to finalize the plan.
+Finally | سرانجام؛ در نهایت | Finally, I finished my work.
+Finance | امور مالی؛ تأمین مالی | She works in finance.
+Financial | مالی | I need financial advice.
+Financier | سرمایه‌گذار؛ تأمین‌کننده مالی | The financier supported the project.
+Finite | محدود؛ دارای پایان | Time is finite.
+Flexibility | انعطاف‌پذیری | This job offers flexibility.
+Flexible | انعطاف‌پذیر | My schedule is flexible.
+Fluctuate | نوسان داشتن | Prices fluctuate every day.
+Fluctuation | نوسان | There was a fluctuation in prices.
+Focus | تمرکز؛ تمرکز کردن | Please focus on your work.
+Focused | متمرکز | She is focused on her studies.
+Format | قالب؛ قالب‌بندی کردن | Please use this format.
+Formula | فرمول | I learned a new formula.
+Formulate | تدوین کردن؛ فرمول‌بندی کردن | We need to formulate a plan.
+Forthcoming | آینده؛ آتی؛ به‌زودی منتشرشونده | The forthcoming meeting is important.
+Found | تأسیس کردن؛ بنیان گذاشتن | They founded a new company.
+Foundation | بنیاد؛ پایه؛ اساس | Education is the foundation of success.
+Founder | بنیان‌گذار | She is the founder of the company.
+Founding | تأسیس؛ بنیان‌گذاری | The founding of the school was important.
+Framework | چارچوب | We need a clear framework.
+Function | عملکرد؛ وظیفه؛ عمل کردن | This machine has an important function.
+Fund | سرمایه؛ صندوق؛ تأمین مالی کردن | They raised money for the fund.
+Fundamental | اساسی؛ بنیادی | Trust is fundamental to friendship.
