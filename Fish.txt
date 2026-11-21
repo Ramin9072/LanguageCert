@@ -1096,3 +1096,69 @@ Initial | اولیه؛ آغازین | This is my initial idea.
 Initiation | آغاز؛ شروع؛ شروع رسمی عضویت | The initiation of the project took time.
 Injure | زخمی کردن؛ آسیب رساندن | Be careful not to injure yourself.
 Injured | زخمی؛ آسیب‌دیده | The injured man went to the hospital.
+
+## Agriculture – کشاورزی
+
+# Agricultural villages | روستاهای کشاورزی | Agricultural villages are common in this area.
+# Seed output | میزان تولید بذر | The seed output was high this year.
+# Farmyard food | غذای حیاط مزرعه | Cows need farmyard food.
+# Paid work | کار با حقوق | Many people need paid work.
+# Large-scale farming | کشاورزی در مقیاس بزرگ | Large-scale farming needs more land.
+# Irrigated agriculture | کشاورزی آبی | Irrigated agriculture needs water.
+# Organic farms | مزارع ارگانیک | Organic farms use natural methods.
+# Growing methods | روش‌های کشت و پرورش | New growing methods save time.
+# Crop loss | از بین رفتن محصول؛ خسارت محصول | Drought can cause crop loss.
+# Chemical fertilizers | کودهای شیمیایی | Farmers use chemical fertilizers.
+# Crop genetics | ژنتیک محصولات کشاورزی | Crop genetics can improve plants.
+# Chemical pesticides | آفت‌کش‌های شیمیایی | Farmers use chemical pesticides.
+# Pesticide resistance | مقاومت در برابر آفت‌کش‌ها | Some insects develop pesticide resistance.
+# Extensive fertilizer | کوددهی گسترده؛ استفاده زیاد از کود | Extensive fertilizer can affect plant growth.
+# Wheat and rice production | تولید گندم و برنج | Wheat and rice production increased.
+# Agricultural system | سیستم کشاورزی | The agricultural system needs improvement.
+# Livestock markets | بازارهای دام | Livestock markets are important for farmers.
+# Fertile land | زمین حاصلخیز | Farmers need fertile land.
+# Fertile and arable land | زمین حاصلخیز و قابل کشت | Fertile and arable land is good for farming.
+# Vertical farm | مزرعه عمودی | A vertical farm saves space.
+# Coconut husk | پوست نارگیل | Coconut husk can be used as fiber.
+# Agricultural waste | ضایعات کشاورزی | Agricultural waste can become fertilizer.
+# Animal wastes | فضولات حیوانی | Animal wastes can be used as manure.
+# Livestock disease | بیماری دام | This livestock disease affects cows.
+# Commercial crop | محصول تجاری | Wheat is a commercial crop.
+# Parent plant | گیاه مادر | The new plant grows from the parent plant.
+# Food supply | تأمین غذا | The food supply is important for everyone.
+# Organic agriculture | کشاورزی ارگانیک | Organic agriculture uses natural fertilizers.
+# Corn shipments | محموله‌های ذرت | Corn shipments arrived yesterday.
+# Food production | تولید غذا | Food production is important worldwide.
+# Organic food | غذای ارگانیک | I often buy organic food.
+# Organic standards | استانداردهای ارگانیک | Organic standards protect consumers.
+# Private gardening | باغبانی شخصی | Private gardening is a relaxing hobby.
+# Soil quality | کیفیت خاک | Good soil quality helps plants grow.
+# Soil salinity | شوری خاک | Soil salinity can harm plants.
+# Cultivated fruits | میوه‌های کشت‌شده | Apples are cultivated fruits.
+# Tree plantations | مزارع درخت؛ کشتزارهای درخت | Tree plantations provide wood.
+# Wine varietals | انواع انگور شرابی | This region has many wine varietals.
+# Weed-free soil | خاک عاری از علف هرز | Seeds grow well in weed-free soil.
+# Large-scale cultivation | کشت در مقیاس بزرگ | Large-scale cultivation requires equipment.
+# The fully-grown plants | گیاهان کاملاً رشدکرده | Farmers harvest the fully-grown plants.
+# Agricultural expansion | گسترش کشاورزی | Agricultural expansion can reduce forests.
+
+## Astronomy and Cosmology – نجوم و کیهان‌شناسی
+
+# Rocky bodies | اجرام سنگی | Asteroids are rocky bodies.
+# Cosmic rays | پرتوهای کیهانی | Cosmic rays come from space.
+# Faint flashes | درخشش‌های ضعیف؛ نورهای کم‌سو | We saw faint flashes in the sky.
+# Wandering stars | ستارگان سرگردان | Planets were once called wandering stars.
+# Milky Way System | منظومه راه شیری | Our solar system is in the Milky Way System.
+# Interstellar space | فضای بین‌ستاره‌ای | The spacecraft entered interstellar space.
+# Stellar explosions | انفجارهای ستاره‌ای | Stellar explosions release energy.
+# Cosmic expansion | انبساط کیهانی | Cosmic expansion continues over time.
+# Space mission | مأموریت فضایی | The space mission was successful.
+# Total cosmic budget | بودجه کل کیهانی؛ مقدار کل ماده و انرژی کیهان | Scientists study the total cosmic budget.
+# Astronomical observations | مشاهدات نجومی | Astronomical observations help us study stars.
+# Supersonic flight | پرواز مافوق صوت | The aircraft completed a supersonic flight.
+# Galaxy cluster | خوشه کهکشانی | This galaxy cluster is very large.
+# Celestial object | جرم آسمانی | The Moon is a celestial object.
+# Observational astronomy | نجوم رصدی | Observational astronomy uses telescopes.
+# Theoretical astronomy | نجوم نظری | Theoretical astronomy studies ideas about space.
+# Astronomical phenomenon | پدیده نجومی | An eclipse is an astronomical phenomenon.
+# Terrestrial planets | سیارات زمین‌مانند | Earth and Mars are terrestrial planets.
