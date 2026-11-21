@@ -712,7 +712,6 @@ Las Vegas | لاس وگاس | Las Vegas is a city in Nevada.
 Los Angeles | لس‌آنجلس | Los Angeles is in California.
 San Diego | سن دیگو | San Diego is in California.
 San Francisco | سان‌فرانسیسکو | San Francisco is a beautiful city.
-
 Alberta | آلبرتا | Alberta is a province in Canada.
 British | بریتانیایی | British people speak English.
 British Columbia | بریتیش کلمبیا | British Columbia is a province in Canada.
@@ -726,7 +725,6 @@ Quebec | کبک | Quebec is a province in Canada.
 Saskatchewan | ساسکاچوان | Saskatchewan is a province in Canada.
 Northwest Territories | قلمروهای شمال غربی | The Northwest Territories are in Canada.
 Yukon | یوکان | Yukon is a territory in Canada.
-
 Edmonton | ادمونتون | Edmonton is the capital of Alberta.
 Victoria | ویکتوریا | Victoria is the capital of British Columbia.
 Winnipeg | وینیپگ | Winnipeg is the capital of Manitoba.
@@ -760,10 +758,8 @@ University of North Carolina | دانشگاه کارولینای شمالی | Th
 University of Queensland | دانشگاه کوئینزلند | The University of Queensland is in Australia.
 University of Sussex | دانشگاه ساسکس | The University of Sussex is in England.
 Wharton School | مدرسه وارتون | The Wharton School is part of the University of Pennsylvania.
-
 American Museum of Natural History | موزه تاریخ طبیعی آمریکا | The American Museum of Natural History is in New York.
 Arc de Triomphe | طاق پیروزی | The Arc de Triomphe is in Paris.
-
 Contribute | مشارکت کردن، کمک کردن | I want to contribute to this project.
 Contribution | مشارکت، کمک، سهم | Thank you for your contribution.
 Contributor | مشارکت‌کننده، همکار | He is a regular contributor.
@@ -1004,3 +1000,99 @@ Framework | چارچوب | We need a clear framework.
 Function | عملکرد؛ وظیفه؛ عمل کردن | This machine has an important function.
 Fund | سرمایه؛ صندوق؛ تأمین مالی کردن | They raised money for the fund.
 Fundamental | اساسی؛ بنیادی | Trust is fundamental to friendship.
+Gender | جنسیت | Gender should not limit opportunities.
+Generate | تولید کردن؛ ایجاد کردن | This machine generates electricity.
+Generation | نسل؛ تولید | The younger generation uses technology.
+Globalization | جهانی‌شدن | Globalization connects different countries.
+Globe | کره زمین؛ جهان | The globe shows all the countries.
+Goal | هدف | My goal is to learn English.
+Grade | نمره؛ پایه تحصیلی؛ درجه | I got a good grade.
+Graded | نمره‌گذاری‌شده؛ درجه‌بندی‌شده | The teacher graded our tests.
+Grant | کمک‌هزینه؛ اعطا کردن | She received a research grant.
+Guarantee | ضمانت؛ تضمین کردن | I guarantee that it will work.
+Guideline | دستورالعمل؛ راهنما | Please follow the guidelines.
+Hence | ازاین‌رو؛ بنابراین | It was late; hence, we went home.
+Hierarchical | سلسله‌مراتبی | The company has a hierarchical structure.
+Hierarchy | سلسله‌مراتب | The organization has a clear hierarchy.
+Highlight | برجسته کردن؛ نکته مهم | Please highlight the important words.
+Hypothesis | فرضیه | The scientist tested her hypothesis.
+Hypothesize | فرضیه‌سازی کردن | Scientists hypothesize about the cause.
+Hypothetical | فرضی؛ احتمالی | This is a hypothetical situation.
+Identical | یکسان؛ کاملاً مشابه | The two bags are identical.
+Identification | شناسایی؛ مدرک هویتی | I need identification at the airport.
+Identify | شناسایی کردن؛ تشخیص دادن | Can you identify this person?
+Identity | هویت | Everyone has a unique identity.
+Ideological | ایدئولوژیک؛ مربوط به عقاید سیاسی یا فکری | They have ideological differences.
+Ideology | ایدئولوژی؛ نظام فکری | The group has a different ideology.
+Ignorance | ناآگاهی؛ جهل | Ignorance can cause problems.
+Ignorant | ناآگاه؛ بی‌اطلاع | I was ignorant of the rules.
+Illegal | غیرقانونی | Parking here is illegal.
+Illogical | غیرمنطقی | His argument is illogical.
+Illustrate | توضیح دادن با مثال؛ تصویرسازی کردن | This picture illustrates the story.
+Illustration | تصویر؛ مثال توضیحی | The book has a beautiful illustration.
+Illustrative | توضیحی؛ روشنگر | This is an illustrative example.
+Image | تصویر؛ تصور | I took an image of the sunset.
+Imagery | تصویرپردازی؛ مجموعه تصاویر ذهنی | The poem uses vivid imagery.
+Immature | نابالغ؛ ناپخته | His behavior is immature.
+Immigrant | مهاجر | The immigrant found a new job.
+Immigrate | مهاجرت کردن به یک کشور | They plan to immigrate to Canada.
+Impact | تأثیر؛ اثر گذاشتن | The decision had a big impact.
+Implement | اجرا کردن؛ پیاده‌سازی کردن | We will implement the new plan.
+Implicate | دخیل دانستن؛ متهم کردن | The evidence may implicate him.
+Implication | پیامد؛ مفهوم ضمنی؛ دلالت | This decision has serious implications.
+Implicit | ضمنی؛ غیرمستقیم | There was an implicit agreement.
+Imply | دلالت داشتن؛ تلویحاً بیان کردن | His words imply that he is unhappy.
+Impose | تحمیل کردن؛ وضع کردن | They imposed a new tax.
+Imposition | تحمیل؛ وضع کردن | The imposition of new rules caused problems.
+Imprecise | غیردقیق؛ مبهم | The instructions were imprecise.
+Inaccessible | غیرقابل دسترس | The village is inaccessible by road.
+Inaccurate | نادرست؛ غیردقیق | This information is inaccurate.
+Inadequacy | ناکافی بودن؛ کمبود | We noticed the inadequacy of the plan.
+Inadequate | ناکافی؛ نامناسب | The room is inadequate for our needs.
+Inappropriate | نامناسب؛ نابجا | That comment was inappropriate.
+Incapable | ناتوان؛ فاقد توانایی | He is incapable of doing this alone.
+Incapacitate | ناتوان کردن؛ از کار انداختن | The injury may incapacitate him.
+Incentive | مشوق؛ انگیزه | The company offers a bonus as an incentive.
+Incidence | میزان وقوع؛ فراوانی وقوع | The incidence of flu increased.
+Incident | حادثه؛ رویداد | There was a small incident at school.
+Incidentally | ضمناً؛ اتفاقاً | Incidentally, I saw your brother yesterday.
+Inclination | تمایل؛ گرایش | I have an inclination to travel.
+Incline | متمایل بودن؛ شیب داشتن | I incline toward the second option.
+Incoherent | نامنسجم؛ نامفهوم | His explanation was incoherent.
+Income | درآمد | My monthly income is enough.
+Incompatible | ناسازگار؛ غیرقابل تطبیق | These two devices are incompatible.
+Inconceivable | غیرقابل تصور | It is inconceivable to me.
+Inconclusive | غیرقطعی؛ بی‌نتیجه | The test results were inconclusive.
+Inconsistency | ناسازگاری؛ تناقض | There is an inconsistency in his story.
+Inconsistent | ناسازگار؛ متناقض؛ بی‌ثبات | His answers are inconsistent.
+Incorporate | ترکیب کردن؛ گنجاندن | We should incorporate your ideas.
+Incorporated | ثبت‌شده به‌عنوان شرکت؛ ادغام‌شده | The business is incorporated.
+Indefinite | نامشخص؛ نامعین | We waited for an indefinite period.
+Index | فهرست؛ نمایه؛ شاخص | Look at the index of the book.
+Indicate | نشان دادن؛ بیان کردن | The sign indicates the direction.
+Indication | نشانه؛ علامت؛ دلالت | There is no indication of danger.
+Indicative | نشان‌دهنده؛ حاکی از | These results are indicative of progress.
+Indicator | شاخص؛ نشانگر | The price is an important indicator.
+Indiscretion | بی‌احتیاطی؛ رفتار نسنجیده | His indiscretion caused trouble.
+Indistinct | نامشخص؛ مبهم؛ غیرقابل تشخیص | I heard an indistinct sound.
+Individual | فرد؛ شخص؛ فردی | Every individual is different.
+Individualism | فردگرایی | Individualism values personal freedom.
+Individualist | فردگرا | He is an individualist.
+Individually | به‌صورت فردی؛ جداگانه | Please answer the questions individually.
+Induce | موجب شدن؛ القا کردن | The medicine may induce sleep.
+Induction | القا؛ استنتاج؛ معارفه رسمی | The induction ceremony starts today.
+Inevitable | اجتناب‌ناپذیر | Change is inevitable.
+Inevitably | ناگزیر؛ به‌طور اجتناب‌ناپذیر | Mistakes inevitably happen.
+Infer | استنباط کردن؛ نتیجه‌گیری کردن | I can infer the answer from the text.
+Inference | استنباط؛ نتیجه‌گیری | Your inference is correct.
+Infinite | بی‌نهایت؛ نامحدود | Space seems infinite.
+Infinitely | بی‌نهایت؛ به‌طور نامحدود | The possibilities are infinitely varied.
+Inflexible | انعطاف‌ناپذیر؛ سخت‌گیر | My boss is inflexible.
+Infrastructure | زیرساخت | The city needs better infrastructure.
+Inherent | ذاتی؛ درونی | Risk is inherent in this activity.
+Inhabitation | سکونت؛ زندگی در یک مکان | Human inhabitation changed the area.
+Inhibition | بازداری؛ مهار؛ مانع روانی | Fear can cause inhibition.
+Initial | اولیه؛ آغازین | This is my initial idea.
+Initiation | آغاز؛ شروع؛ شروع رسمی عضویت | The initiation of the project took time.
+Injure | زخمی کردن؛ آسیب رساندن | Be careful not to injure yourself.
+Injured | زخمی؛ آسیب‌دیده | The injured man went to the hospital.
